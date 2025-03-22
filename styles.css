@@ -258,3 +258,29 @@ footer {
 .proyectos-container .proyecto:nth-child(3) {
     animation-delay: 0.4s;
 }
+
+/* Animación para el título y el párrafo introductorio */
+main h2, main p {
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+main h2 {
+    animation-delay: 0.1s;
+}
+
+main p {
+    animation-delay: 0.3s;
+}
+
+/* Asegurarnos de que la animación fadeIn esté definida */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
