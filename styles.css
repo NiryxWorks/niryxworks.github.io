@@ -51,254 +51,6 @@ main {
     margin: 20px;
 }
 
-h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2.5em;
-    font-weight: 700;
-    color: #b22222;
-    margin-bottom: 20px;
-}
-
-h3, h4 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    color: #ff0000;
-}
-
-p {
-    font-size: 1.2em;
-    margin: 10px 0;
-    line-height: 1.6;
-    color: #333;
-}
-
-.social-links {
-    margin: 30px 0;
-}
-
-.social-links h4 {
-    margin-bottom: 15px;
-    color: #333;
-}
-
-.social-icon {
-    color: #ff0000;
-    font-size: 2em;
-    margin: 0 15px;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.social-icon:hover {
-    color: #333;
-}
-
-.cta-button, .button {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 30px;
-    background-color: #ff0000;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1.1em;
-    font-weight: 600;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.cta-button:hover, .button:hover {
-    background-color: #333;
-    animation: bounce 0.5s ease;
-}
-
-/* Animación de rebote */
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-    }
-    40% {
-        transform: translateY(-10px);
-    }
-    60% {
-        transform: translateY(-5px);
-    }
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #fff;
-    font-size: 0.9em;
-    color: #777;
-}
-
-/* Estilos para la página de proyectos */
-.proyectos-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-}
-
-.proyecto {
-    border: 2px solid #ff0000;
-    padding: 10px;
-    width: 100%;
-    max-width: 250px; /* Reducimos el tamaño máximo para que los cuadros sean más pequeños */
-    border-radius: 8px;
-    background-color: #fff;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.proyecto:hover {
-    transform: scale(1.02);
-}
-
-.proyecto img {
-    max-width: 100%;
-    border-radius: 8px;
-    opacity: 0.8;
-}
-
-.proyecto h3 {
-    font-size: 1.1em; /* Reducimos el tamaño del título */
-    margin: 8px 0;
-}
-
-.proyecto p {
-    font-size: 0.9em; /* Reducimos el tamaño del texto */
-    margin: 5px 0;
-}
-
-/* Ajuste para pantallas grandes */
-@media (min-width: 768px) {
-    .proyecto {
-        width: calc(33.33% - 30px); /* 3 proyectos por fila */
-    }
-}
-
-/* Ajuste para pantallas medianas */
-@media (max-width: 767px) and (min-width: 480px) {
-    .proyecto {
-        width: calc(50% - 30px); /* 2 proyectos por fila */
-    }
-}
-
-/* Estilos para la página de contacto */
-.contacto, .discord {
-    border: 2px solid #ff0000;
-    padding: 20px;
-    margin: 20px auto;
-    width: 80%;
-    max-width: 400px;
-    border-radius: 10px;
-    background-color: #fff5f5;
-    transition: transform 0.2s ease;
-}
-
-.contacto:hover, .discord:hover {
-    transform: scale(1.05);
-}
-
-/* Responsividad */
-@media (max-width: 600px) {
-    .logo {
-        max-width: 150px;
-    }
-
-    nav a {
-        display: block;
-        margin: 15px 0;
-    }
-
-    main {
-        padding: 40px 10px;
-        margin: 10px;
-    }
-
-    h2 {
-        font-size: 1.8em;
-    }
-
-    p {
-        font-size: 1em;
-    }
-
-    .social-icon {
-        font-size: 1.5em;
-        margin: 0 10px;
-    }
-
-    .cta-button {
-        padding: 10px 20px;
-    }
-}
-
-.proyecto {
-    border: 2px solid #ff0000;
-    padding: 10px;
-    width: 100%;
-    max-width: 250px;
-    border-radius: 8px;
-    background-color: #fff;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    opacity: 0; /* Los proyectos empiezan invisibles */
-    animation: fadeIn 0.5s ease forwards; /* Animación de desvanecimiento */
-}
-
-/* Animación de desvanecimiento */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Retraso para cada proyecto */
-.proyectos-container .proyecto:nth-child(1) {
-    animation-delay: 0.2s;
-}
-
-.proyectos-container .proyecto:nth-child(2) {
-    animation-delay: 0.3s;
-}
-
-.proyectos-container .proyecto:nth-child(3) {
-    animation-delay: 0.4s;
-}
-
-/* Animación para el título y el párrafo introductorio */
-main h2, main p {
-    opacity: 0;
-    animation: fadeIn 0.5s ease forwards;
-}
-
-main h2 {
-    animation-delay: 0.1s;
-}
-
-main p {
-    animation-delay: 0.3s;
-}
-
-/* Asegurarnos de que la animación fadeIn esté definida */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 /* Animaciones para index.html */
 main h2, main p, .social-links h4, .social-links .social-icon, .cta-button {
     opacity: 0;
@@ -335,4 +87,264 @@ main p:nth-child(3) {
 
 .cta-button {
     animation-delay: 1.5s;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #b22222;
+    margin-bottom: 20px;
+}
+
+h3, h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #ff0000;
+}
+
+p {
+    font-size: 1.2em;
+    margin: 10px 0;
+    line-height: 1.6;
+    color: #333;
+}
+
+.social-links {
+    margin: 30px 0;
+}
+
+.social-links h4 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.social-icon {
+    color: #ff0000;
+    font-size: 2em;
+    margin: 0 15px;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #333;
+    animation: bounce 0.5s ease;
+}
+
+.cta-button, .button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background-color: #ff0000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover, .button:hover {
+    background-color: #333;
+    animation: bounce 0.5s ease;
+}
+
+/* Animación de rebote */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Animación de desvanecimiento */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    font-size: 0.9em;
+    color: #777;
+}
+
+/* Estilos para la sección About Me */
+.about-me {
+    margin: 40px 0;
+    padding: 20px;
+    background-color: #fff5f5;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+    animation-delay: 1.7s;
+}
+
+.about-me h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8em;
+    color: #b22222;
+    margin-bottom: 15px;
+}
+
+.about-me p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+/* Estilos para la página de proyectos */
+.proyectos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.proyecto {
+    border: 2px solid #ff0000;
+    padding: 10px;
+    width: 100%;
+    max-width: 250px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.proyecto:hover {
+    transform: scale(1.02);
+}
+
+.proyecto img {
+    max-width: 100%;
+    border-radius: 8px;
+    opacity: 0.8;
+}
+
+.proyecto h3 {
+    font-size: 1.1em;
+    margin: 8px 0;
+}
+
+.proyecto p {
+    font-size: 0.9em;
+    margin: 5px 0;
+}
+
+/* Retraso para cada proyecto */
+.proyectos-container .proyecto:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.proyectos-container .proyecto:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.proyectos-container .proyecto:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+/* Ajuste para pantallas grandes */
+@media (min-width: 768px) {
+    .proyecto {
+        width: calc(33.33% - 30px); /* 3 proyectos por fila */
+    }
+}
+
+/* Ajuste para pantallas medianas */
+@media (max-width: 767px) and (min-width: 480px) {
+    .proyecto {
+        width: calc(50% - 30px); /* 2 proyectos por fila */
+    }
+}
+
+/* Estilos para la página de contacto */
+.contacto, .discord {
+    border: 2px solid #ff0000;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+    background-color: #fff5f5;
+    transition: transform 0.2s ease;
+}
+
+.contacto:hover, .discord:hover {
+    transform: scale(1.05);
+}
+
+/* Estilos para el botón "Back to Top" */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.back-to-top:hover {
+    background-color: #333;
+}
+
+/* Responsividad */
+@media (max-width: 600px) {
+    .logo {
+        max-width: 150px;
+    }
+
+    nav a {
+        display: block;
+        margin: 15px 0;
+    }
+
+    main {
+        padding: 40px 10px;
+        margin: 10px;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    .social-icon {
+        font-size: 1.5em;
+        margin: 0 10px;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+    }
 }
