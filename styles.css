@@ -112,6 +112,7 @@ p {
 
 .social-links {
     margin: 30px 0;
+    background: transparent;
 }
 
 .social-links h4 {
@@ -125,14 +126,14 @@ p {
     margin: 0 15px;
     text-decoration: none;
     transition: color 0.3s ease, transform 0.3s ease;
-    background: #fff; /* Fondo blanco para el círculo */
-    border-radius: 50%; /* Forma circular */
-    width: 50px; /* Ancho fijo para el círculo */
-    height: 50px; /* Alto fijo para el círculo */
-    display: inline-flex; /* Centramos el ícono dentro del círculo */
+    background: #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .social-icon:hover {
@@ -150,11 +151,12 @@ p {
     border-radius: 5px;
     font-size: 1.1em;
     font-weight: 600;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 
 .cta-button:hover, .button:hover {
     background-color: #333;
+    color: #fff;
     animation: bounce 0.5s ease;
 }
 
@@ -350,6 +352,8 @@ footer {
     .social-icon {
         font-size: 1.5em;
         margin: 0 10px;
+        width: 40px;
+        height: 40px;
     }
 
     .cta-button {
