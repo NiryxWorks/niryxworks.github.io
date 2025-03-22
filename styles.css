@@ -2,7 +2,7 @@
 body {
     font-family: 'Open Sans', sans-serif;
     background: linear-gradient(to bottom, #f5f5f5, #fff);
-    color: #333; /* Cambiamos el color de texto general a gris oscuro */
+    color: #333;
     margin: 0;
     padding: 0;
     font-size: 16px;
@@ -55,7 +55,7 @@ h2 {
     font-family: 'Montserrat', sans-serif;
     font-size: 2.5em;
     font-weight: 700;
-    color: #b22222; /* Un rojo más suave para los títulos */
+    color: #b22222;
     margin-bottom: 20px;
 }
 
@@ -69,7 +69,7 @@ p {
     font-size: 1.2em;
     margin: 10px 0;
     line-height: 1.6;
-    color: #333; /* Texto en gris oscuro para mejor legibilidad */
+    color: #333;
 }
 
 .social-links {
@@ -93,7 +93,7 @@ p {
     color: #333;
 }
 
-.cta-button {
+.cta-button, .button {
     display: inline-block;
     margin-top: 20px;
     padding: 12px 30px;
@@ -106,7 +106,7 @@ p {
     transition: background-color 0.3s ease;
 }
 
-.cta-button:hover {
+.cta-button:hover, .button:hover {
     background-color: #333;
 }
 
@@ -116,6 +116,75 @@ footer {
     background-color: #fff;
     font-size: 0.9em;
     color: #777;
+}
+
+/* Estilos para la página de proyectos */
+.proyectos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.proyecto {
+    border: 2px solid #ff0000;
+    padding: 10px;
+    width: 100%;
+    max-width: 250px; /* Reducimos el tamaño máximo para que los cuadros sean más pequeños */
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.proyecto:hover {
+    transform: scale(1.02);
+}
+
+.proyecto img {
+    max-width: 100%;
+    border-radius: 8px;
+    opacity: 0.8;
+}
+
+.proyecto h3 {
+    font-size: 1.1em; /* Reducimos el tamaño del título */
+    margin: 8px 0;
+}
+
+.proyecto p {
+    font-size: 0.9em; /* Reducimos el tamaño del texto */
+    margin: 5px 0;
+}
+
+/* Ajuste para pantallas grandes */
+@media (min-width: 768px) {
+    .proyecto {
+        width: calc(33.33% - 30px); /* 3 proyectos por fila */
+    }
+}
+
+/* Ajuste para pantallas medianas */
+@media (max-width: 767px) and (min-width: 480px) {
+    .proyecto {
+        width: calc(50% - 30px); /* 2 proyectos por fila */
+    }
+}
+
+/* Estilos para la página de contacto */
+.contacto, .discord {
+    border: 2px solid #ff0000;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+    background-color: #fff5f5;
+    transition: transform 0.2s ease;
+}
+
+.contacto:hover, .discord:hover {
+    transform: scale(1.05);
 }
 
 /* Responsividad */
