@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team - Niryx Works</title>
+    <link rel="icon" href="images/Icon64.png" sizes="64x64" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <img src="images/NiryxWorksLogo.png" alt="Niryx Works Logo" class="logo">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="team.html">Team</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Meet the Team</h2>
+        <p>We're a small but passionate team working on exciting projects at Niryx Works.</p>
+        <div class="team-container">
+            <div class="team-member">
+                <img src="images/avatar-placeholder.png" alt="Matias 'Niryx' Pose">
+                <h4>Matias 'Niryx' Pose</h4>
+                <p class="role">Founder & Lead Developer</p>
+                <p>A passionate indie developer with a love for creating innovative games and web experiences. Based in Argentina, I'm the driving force behind Niryx Works.</p>
+            </div>
+        </div>
+        <a href="index.html" class="cta-button">Back to Home</a>
+    </main>
+    <footer>
+        <p>© 2025 Niryx Works. All rights reserved.</p>
+    </footer>
+    <button class="back-to-top" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Función para volver al inicio de la página
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Mostrar u ocultar el botón según el desplazamiento
+        window.onscroll = function() {
+            const button = document.querySelector('.back-to-top');
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                button.style.display = 'block';
+            } else {
+                button.style.display = 'none';
+            }
+        };
+    </script>
+</body>
+</html>
