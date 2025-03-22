@@ -360,3 +360,29 @@ footer {
         padding: 10px 20px;
     }
 }
+
+/* Animaciones para team.html */
+.team h2, .team p {
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.team h2 {
+    animation-delay: 0.1s;
+}
+
+.team p {
+    animation-delay: 0.3s;
+}
+
+.team-container .team-member:nth-child(1) {
+    animation-delay: 0.5s;
+}
+
+.team-container .team-member:nth-child(2) {
+    animation-delay: 0.7s;
+}
+
+.team-container .team-member:nth-child(3) {
+    animation-delay: 0.9s;
+}
