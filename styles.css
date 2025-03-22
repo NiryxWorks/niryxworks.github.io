@@ -125,13 +125,21 @@ p {
     margin: 0 15px;
     text-decoration: none;
     transition: color 0.3s ease, transform 0.3s ease;
-    background: transparent; /* Aseguramos que no haya fondo blanco */
+    background: #fff; /* Fondo blanco para el círculo */
+    border-radius: 50%; /* Forma circular */
+    width: 50px; /* Ancho fijo para el círculo */
+    height: 50px; /* Alto fijo para el círculo */
+    display: inline-flex; /* Centramos el ícono dentro del círculo */
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
 }
 
 .social-icon:hover {
-    color: #333; /* Gris oscuro, que debería ser visible contra el fondo */
+    color: #333;
     animation: bounce 0.5s ease;
 }
+
 .cta-button, .button {
     display: inline-block;
     margin-top: 20px;
