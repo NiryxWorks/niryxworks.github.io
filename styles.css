@@ -1,7 +1,7 @@
 /* Estilos generales */
 body {
     font-family: 'Open Sans', sans-serif;
-    background: linear-gradient(to bottom, #f5f5f5, #fff);
+    background: linear-gradient(135deg, #f5f5f5 0%, #ffcccc 50%, #fff 100%);
     color: #333;
     margin: 0;
     padding: 0;
