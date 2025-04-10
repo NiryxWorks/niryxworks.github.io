@@ -173,26 +173,6 @@ p {
     }
 }
 
-/* Animación de desvanecimiento */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #fff;
-    font-size: 0.9em;
-    color: #777;
-}
-
 /* Estilos para la sección About Me */
 .about-me {
     margin: 40px 0;
