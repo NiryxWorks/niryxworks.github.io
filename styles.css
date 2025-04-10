@@ -88,7 +88,7 @@ p {
     margin: 0 15px;
     text-decoration: none;
     transition: color 0.3s ease;
-    background: #fff;
+    background: #ffe6e6;
     border-radius: 50%;
     width: 50px;
     height: 50px;
@@ -99,7 +99,8 @@ p {
 }
 
 .social-icon:hover {
-    color: #333;
+    color: #b22222;
+    background: #fff;
 }
 
 .cta-button, .button {
@@ -116,7 +117,7 @@ p {
 }
 
 .cta-button:hover, .button:hover {
-    background-color: #333;
+    background-color: #b22222;
     color: #fff;
 }
 
@@ -208,7 +209,7 @@ footer {
 }
 
 .team-icon:hover {
-    color: #333;
+    color: #b22222;
 }
 
 /* Ajuste para pantallas grandes */
