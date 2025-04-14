@@ -12,6 +12,9 @@
 </head>
 <body>
     <header>
+        <button class="theme-toggle" id="theme-toggle" title="Toggle Theme">
+            <i class="fas fa-sun"></i>
+        </button>
         <img src="images/NiryxWorksLogo.png" alt="Niryx Works Logo" class="logo">
         <nav>
             <a href="index.html">Home</a>
@@ -46,5 +49,26 @@
     <footer>
         <p>© 2025 Niryx Works. All rights reserved.</p>
     </footer>
+    <script>
+        // Cargar el tema guardado al iniciar la página
+        const html = document.documentElement;
+        const themeToggle = document.getElementById('theme-toggle');
+        const currentTheme = localStorage.getItem('theme') || 'light';
+
+        if (currentTheme === 'dark') {
+            html.classList.add('dark-theme');
+            themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        } else {
+            themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        }
+
+        // Alternar tema al hacer clic en el botón
+        themeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark-theme');
+            const newTheme = html.classList.contains('dark-theme') ? 'dark' : 'light';
+            localStorage.setItem('theme', newTheme);
+            themeToggle.innerHTML = newTheme === 'dark' ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>';
+        });
+    </script>
 </body>
 </html>
