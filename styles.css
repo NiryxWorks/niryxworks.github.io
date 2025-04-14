@@ -532,3 +532,64 @@ footer {
         max-width: 100%;
     }
 }
+
+/* Estilos para el selector de idioma */
+.language-selector {
+    position: fixed;
+    top: 20px;
+    right: 70px; /* A la izquierda del botón de tema */
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ff0000;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+    transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.language-selector:focus {
+    outline: none;
+    border-color: #b22222;
+}
+
+/* Ajustar el botón de tema para que no se superponga */
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    color: #ff0000;
+}
+
+/* Ajustes para el tema oscuro */
+.dark-theme .language-selector {
+    border: 1px solid #ff5555;
+    background-color: #333;
+    color: #e0e0e0;
+}
+
+.dark-theme .language-selector:focus {
+    border-color: #ff9999;
+}
+
+/* Ajustes para responsividad */
+@media (max-width: 600px) {
+    .language-selector {
+        top: 15px;
+        right: 60px;
+        font-size: 0.9em;
+        padding: 3px;
+    }
+
+    .theme-toggle {
+        top: 15px;
+        right: 15px;
+        font-size: 1.2em;
+    }
+}
