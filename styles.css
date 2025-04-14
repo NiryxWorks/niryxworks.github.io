@@ -1,4 +1,4 @@
-/* Estilos generales */
+/* Estilos generales - Tema claro por defecto */
 body {
     font-family: 'Open Sans', sans-serif;
     background: linear-gradient(135deg, #f5f5f5 0%, #ffcccc 50%, #fff 100%);
@@ -6,12 +6,14 @@ body {
     margin: 0;
     padding: 0;
     font-size: 16px;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 header {
     text-align: center;
     background-color: #fff;
     padding: 20px 0;
+    transition: background-color 0.3s ease;
 }
 
 .logo {
@@ -26,6 +28,7 @@ nav {
     background-color: #fff;
     padding: 15px 0;
     text-align: center;
+    transition: background-color 0.3s ease;
 }
 
 nav a {
@@ -49,6 +52,7 @@ main {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     margin: 20px;
+    transition: background 0.3s ease, border-color 0.3s ease;
 }
 
 h2 {
@@ -57,12 +61,14 @@ h2 {
     font-weight: 700;
     color: #b22222;
     margin-bottom: 20px;
+    transition: color 0.3s ease;
 }
 
 h3, h4 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     color: #ff0000;
+    transition: color 0.3s ease;
 }
 
 p {
@@ -70,6 +76,7 @@ p {
     margin: 10px 0;
     line-height: 1.6;
     color: #333;
+    transition: color 0.3s ease;
 }
 
 .social-links {
@@ -80,6 +87,7 @@ p {
 .social-links h4 {
     margin-bottom: 15px;
     color: #333;
+    transition: color 0.3s ease;
 }
 
 .social-icon {
@@ -96,6 +104,7 @@ p {
     justify-content: center;
     align-items: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 .social-icon:hover {
@@ -127,6 +136,7 @@ footer {
     background-color: #fff;
     font-size: 0.9em;
     color: #777;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Estilos para la sección About Me */
@@ -136,6 +146,7 @@ footer {
     background-color: #fff5f5;
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
 }
 
 .about-me h3 {
@@ -143,11 +154,13 @@ footer {
     font-size: 1.8em;
     color: #b22222;
     margin-bottom: 15px;
+    transition: color 0.3s ease;
 }
 
 .about-me p {
     font-size: 1.1em;
     line-height: 1.6;
+    transition: color 0.3s ease;
 }
 
 /* Estilos para la página Team */
@@ -165,17 +178,26 @@ footer {
 
 .team-member {
     border: 2px solid #ff0000;
-    padding: 10px;
+    padding: 15px;
     width: 100%;
     max-width: 250px;
     border-radius: 8px;
     background-color: #fff;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .team-member:hover {
     transform: scale(1.02);
+}
+
+.team-avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+    display: block;
+    object-fit: cover;
 }
 
 .team-member h3 {
@@ -183,17 +205,20 @@ footer {
     font-size: 1.1em;
     color: #ff0000;
     margin: 8px 0;
+    transition: color 0.3s ease;
 }
 
 .team-member .role {
     font-size: 0.9em;
     color: #777;
     margin: 5px 0;
+    transition: color 0.3s ease;
 }
 
 .team-member p {
     font-size: 0.9em;
     margin: 5px 0;
+    transition: color 0.3s ease;
 }
 
 .team-links {
@@ -242,7 +267,7 @@ footer {
     border-radius: 8px;
     background-color: #fff;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .proyecto:hover {
@@ -258,11 +283,13 @@ footer {
 .proyecto h3 {
     font-size: 1.1em;
     margin: 8px 0;
+    transition: color 0.3s ease;
 }
 
 .proyecto p {
     font-size: 0.9em;
     margin: 5px 0;
+    transition: color 0.3s ease;
 }
 
 /* Ajuste para pantallas grandes */
@@ -288,7 +315,7 @@ footer {
     max-width: 400px;
     border-radius: 10px;
     background-color: #fff5f5;
-    transition: transform 0.2s ease;
+    transition: transform 0.2s ease, background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .contacto:hover, .discord:hover {
@@ -312,14 +339,153 @@ footer {
     font-size: 1.5em;
     cursor: pointer;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .back-to-top:hover {
     background-color: #333;
 }
 
-/* Responsividad */
+/* Estilos para la sección de X Feed */
+.x-feed-section {
+    margin: 40px 0;
+    padding: 20px;
+    background-color: #fff5f5;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.x-feed-section h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8em;
+    color: #b22222;
+    margin-bottom: 20px;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+.x-feed {
+    max-width: 500px;
+    margin: 0 auto;
+    min-height: 400px;
+}
+
+/* Estilo para el botón de tema */
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    color: #ff0000;
+}
+
+.theme-toggle:hover {
+    color: #b22222;
+}
+
+/* Estilos para el tema oscuro */
+.dark-theme {
+    background: linear-gradient(135deg, #2a2a2a 0%, #4a2a2a 50%, #333 100%);
+    color: #e0e0e0;
+}
+
+.dark-theme header,
+.dark-theme nav,
+.dark-theme footer {
+    background-color: #222;
+    color: #e0e0e0;
+}
+
+.dark-theme nav a {
+    color: #ff5555;
+}
+
+.dark-theme nav a:hover {
+    color: #e0e0e0;
+}
+
+.dark-theme main {
+    background: linear-gradient(to bottom, rgba(40, 40, 40, 0.9), #333);
+    border: 1px solid #ff5555;
+    color: #e0e0e0;
+}
+
+.dark-theme h2,
+.dark-theme h3,
+.dark-theme h4,
+.dark-theme .team-member h3,
+.dark-theme .proyecto h3,
+.dark-theme .x-feed-section h3 {
+    color: #ff5555;
+}
+
+.dark-theme p,
+.dark-theme .social-links h4,
+.dark-theme .team-member .role,
+.dark-theme .team-member p,
+.dark-theme .proyecto p,
+.dark-theme footer {
+    color: #e0e0e0;
+}
+
+.dark-theme .social-icon {
+    color: #ff5555;
+    background: #444;
+}
+
+.dark-theme .social-icon:hover {
+    color: #ff9999;
+    background: #555;
+}
+
+.dark-theme .cta-button,
+.dark-theme .button,
+.dark-theme .back-to-top {
+    background-color: #ff5555;
+    color: #fff;
+}
+
+.dark-theme .cta-button:hover,
+.dark-theme .button:hover,
+.dark-theme .back-to-top:hover {
+    background-color: #ff9999;
+}
+
+.dark-theme .about-me,
+.dark-theme .contacto,
+.dark-theme .discord,
+.dark-theme .x-feed-section {
+    background-color: #333;
+}
+
+.dark-theme .team-member,
+.dark-theme .proyecto {
+    background-color: #333;
+    border: 2px solid #ff5555;
+}
+
+.dark-theme .team-icon {
+    color: #ff5555;
+}
+
+.dark-theme .team-icon:hover {
+    color: #ff9999;
+}
+
+.dark-theme .theme-toggle {
+    color: #ff5555;
+}
+
+.dark-theme .theme-toggle:hover {
+    color: #ff9999;
+}
+
+/* Ajustes para responsividad */
 @media (max-width: 600px) {
     .logo {
         max-width: 150px;
@@ -353,33 +519,7 @@ footer {
     .cta-button {
         padding: 10px 20px;
     }
-}
 
-/* Estilos para la sección de X Feed */
-.x-feed-section {
-    margin: 40px 0;
-    padding: 20px;
-    background-color: #fff5f5;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.x-feed-section h3 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.8em;
-    color: #b22222;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.x-feed {
-    max-width: 500px;
-    margin: 0 auto;
-    min-height: 400px;
-}
-
-/* Ajustes para responsividad */
-@media (max-width: 600px) {
     .x-feed-section {
         padding: 15px;
     }
