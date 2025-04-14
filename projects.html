@@ -11,6 +11,9 @@
 </head>
 <body>
     <header>
+        <button class="theme-toggle" id="theme-toggle" title="Toggle Theme">
+            <i class="fas fa-sun"></i>
+        </button>
         <img src="images/NiryxWorksLogo.png" alt="Niryx Works Logo" class="logo">
         <nav>
             <a href="index.html">Home</a>
@@ -20,31 +23,69 @@
         </nav>
     </header>
     <main>
-        <h2>Projects - Coming Soon</h2>
-        <p>I'm working on several exciting projects. Stay tuned for updates!</p>
+        <h2>My Projects</h2>
+        <p>Here are some of the projects I've been working on at Niryx Works.</p>
         <div class="proyectos-container">
             <div class="proyecto">
-                <h3>Colorful Hearts</h3>
-                <img src="images/CH_Logo.jpeg" alt="Colorful Hearts">
-                <p>A super cute and adorable visual novel about a high school romance.</p>
-                <a href="#" class="button">Learn More</a>
+                <img src="images/project1.jpg" alt="Project 1">
+                <h3>Project 1</h3>
+                <p>A cool project I worked on recently. Check it out!</p>
             </div>
             <div class="proyecto">
-                <h3>Secret Project #2</h3>
-                <img src="images/secret.png" alt="Secret Project">
-                <p>A super cute and adorable visual novel about cat girls and a cafe to run.</p>
-                <a href="#" class="button">Learn More</a>
+                <img src="images/project2.jpg" alt="Project 2">
+                <h3>Project 2</h3>
+                <p>Another exciting project with innovative features.</p>
             </div>
             <div class="proyecto">
-                <h3>Secret Project #3</h3>
-                <img src="images/secret.png" alt="Secret Project">
-                <p>Niryx Works has not revealed any information yet!</p>
-                <a href="#" class="button">Learn More</a>
+                <img src="images/project3.jpg" alt="Project 3">
+                <h3>Project 3</h3>
+                <p>A game development project I'm really proud of.</p>
             </div>
         </div>
+        <a href="index.html" class="cta-button">Back to Home</a>
     </main>
     <footer>
         <p>© 2025 Niryx Works. All rights reserved.</p>
     </footer>
+    <button class="back-to-top" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Función para volver al inicio de la página
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Mostrar u ocultar el botón según el desplazamiento
+        window.onscroll = function() {
+            const button = document.querySelector('.back-to-top');
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                button.style.display = 'block';
+            } else {
+                button.style.display = 'none';
+            }
+        };
+
+        // Cargar el tema guardado al iniciar la página
+        const html = document.documentElement;
+        const themeToggle = document.getElementById('theme-toggle');
+        const currentTheme = localStorage.getItem('theme') || 'light';
+
+        if (currentTheme === 'dark') {
+            html.classList.add('dark-theme');
+            themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        } else {
+            themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        }
+
+        // Alternar tema al hacer clic en el botón
+        themeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark-theme');
+            const newTheme = html.classList.contains('dark-theme') ? 'dark' : 'light';
+            localStorage.setItem('theme', newTheme);
+            themeToggle.innerHTML = newTheme === 'dark' ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>';
+        });
+    </script>
 </body>
 </html>
