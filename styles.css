@@ -354,3 +354,41 @@ footer {
         padding: 10px 20px;
     }
 }
+
+/* Estilos para la sección de X Feed */
+.x-feed-section {
+    margin: 40px 0;
+    padding: 20px;
+    background-color: #fff5f5;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.x-feed-section h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8em;
+    color: #b22222;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.x-feed {
+    max-width: 500px;
+    margin: 0 auto;
+    min-height: 400px;
+}
+
+/* Ajustes para responsividad */
+@media (max-width: 600px) {
+    .x-feed-section {
+        padding: 15px;
+    }
+
+    .x-feed-section h3 {
+        font-size: 1.5em;
+    }
+
+    .x-feed {
+        max-width: 100%;
+    }
+}
