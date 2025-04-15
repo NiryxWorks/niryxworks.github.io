@@ -12,48 +12,91 @@
 </head>
 <body>
     <header>
-        <select class="language-selector" id="language-selector">
-            <option value="en">English</option>
-            <option value="es">Español</option>
-            <option value="ja">日本語</option>
-            <option value="zh">中文</option>
-        </select>
-        <button class="theme-toggle" id="theme-toggle" title="Toggle Theme">
-            <i class="fas fa-sun"></i>
-        </button>
-        <img src="images/NiryxWorksLogo.png" alt="Niryx Works Logo" class="logo">
-        <nav>
-            <a href="index.html" data-i18n="nav-home">Home</a>
-            <a href="projects.html" data-i18n="nav-projects">Projects</a>
-            <a href="team.html" data-i18n="nav-team">Team</a>
-            <a href="contact.html" data-i18n="nav-contact">Contact</a>
-        </nav>
+        <div class="header-left">
+            <img src="images/NiryxWorksLogo.png" alt="Niryx Works Logo" class="logo">
+        </div>
+        <div class="header-right">
+            <select class="language-selector" id="language-selector">
+                <option value="en">English</option>
+                <option value="es">Español</option>
+                <option value="ja">日本語</option>
+                <option value="zh">中文</option>
+            </select>
+            <button class="theme-toggle" id="theme-toggle" title="Toggle Theme">
+                <i class="fas fa-sun"></i>
+            </button>
+            <nav>
+                <a href="index.html" data-i18n="nav-home">Home</a>
+                <a href="projects.html" data-i18n="nav-projects">Projects</a>
+                <a href="team.html" data-i18n="nav-team">Team</a>
+                <a href="contact.html" data-i18n="nav-contact">Contact</a>
+            </nav>
+        </div>
     </header>
     <main>
-        <h2 data-i18n="welcome">Welcome to Niryx Works</h2>
-        <p data-i18n="welcome-subtitle">Bringing creativity and innovation to life through exciting projects.</p>
-        <p data-i18n="created-by">Created by Matias 'Niryx' Pose.</p>
-        <div class="social-links">
-            <h4 data-i18n="follow-me">Follow me on:</h4>
-            <a href="https://www.instagram.com/niryxgames/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
-            <a href="https://x.com/NiryxWorks" target="_blank" class="social-icon"><i class="fab fa-x-twitter"></i></a>
-            <a href="https://www.youtube.com/@NiryxWorks" target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
-        </div>
-        <section class="about-me">
-            <h3 data-i18n="about-me">About Me</h3>
-            <p data-i18n="about-me-text">Hi, I'm Matias 'Niryx' Pose, a passionate creator and indie developer based in Argentina. I love bringing ideas to life through innovative projects, whether it's game development, web design, or other creative endeavors. When I'm not coding, you can find me exploring new technologies or sharing my work with the community.</p>
-        </section>
-        <a href="projects.html" class="cta-button" data-i18n="explore-projects">Explore My Projects</a>
-        <div class="x-feed-section">
-            <h3 data-i18n="x-updates">Latest Updates from X</h3>
-            <div class="x-feed">
-                <a class="twitter-timeline" href="https://twitter.com/NiryxWorks?ref_src=twsrc%5Etfw">Tweets by NiryxWorks</a>
-                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-image">
+                <img src="images/nekophoria-hero.jpg" alt="Nekophoria Hero Image">
             </div>
-        </div>
+            <h1 data-i18n="welcome">Welcome to Niryx Works</h1>
+        </section>
+
+        <!-- Featured Projects -->
+        <section class="featured-projects">
+            <div class="projects-container">
+                <div class="project-card">
+                    <img src="images/nekophoria-thumb.jpg" alt="Nekophoria">
+                    <h3 data-i18n="nekophoria-title">Nekophoria</h3>
+                    <p data-i18n="nekophoria-desc">A spiritual successor to Nekopara, set in a cozy cat-girl café.</p>
+                    <a href="projects.html" class="project-link" data-i18n="view-project">View Project</a>
+                </div>
+                <div class="project-card">
+                    <img src="images/colorfulhearts-thumb.jpg" alt="Colorful Hearts">
+                    <h3 data-i18n="colorfulhearts-title">Colorful Hearts</h3>
+                    <p data-i18n="colorfulhearts-desc">A heartwarming visual novel with colorful emotions.</p>
+                    <a href="projects.html" class="project-link" data-i18n="view-project">View Project</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- News and X Feed -->
+        <section class="news-and-feed">
+            <div class="news-section">
+                <h2 data-i18n="news">News</h2>
+                <div class="news-content">
+                    <p data-i18n="news-placeholder">Stay tuned for updates on Niryx Works projects!</p>
+                </div>
+            </div>
+            <div class="x-feed-section">
+                <h2 data-i18n="x-updates">Twitter</h2>
+                <div class="x-feed">
+                    <a class="twitter-timeline" href="https://twitter.com/NiryxWorks?ref_src=twsrc%5Etfw">Tweets by NiryxWorks</a>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
-        <p data-i18n="footer">© 2025 Niryx Works. All rights reserved.</p>
+        <div class="footer-left">
+            <img src="images/NiryxWorksLogo.png" alt="Niryx Works Logo" class="footer-logo">
+        </div>
+        <div class="footer-center">
+            <p data-i18n="footer">© 2025 Niryx Works. All rights reserved.</p>
+            <nav>
+                <a href="index.html" data-i18n="nav-home">Home</a>
+                <a href="projects.html" data-i18n="nav-projects">Projects</a>
+                <a href="team.html" data-i18n="nav-team">Team</a>
+                <a href="contact.html" data-i18n="nav-contact">Contact</a>
+            </nav>
+        </div>
+        <div class="footer-right">
+            <div class="social-links">
+                <a href="https://www.instagram.com/niryxgames/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="https://x.com/NiryxWorks" target="_blank" class="social-icon"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://www.youtube.com/@NiryxWorks" target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
     </footer>
     <script>
         // Traducciones
@@ -64,13 +107,14 @@
                 "nav-team": "Team",
                 "nav-contact": "Contact",
                 "welcome": "Welcome to Niryx Works",
-                "welcome-subtitle": "Bringing creativity and innovation to life through exciting projects.",
-                "created-by": "Created by Matias 'Niryx' Pose.",
-                "follow-me": "Follow me on:",
-                "about-me": "About Me",
-                "about-me-text": "Hi, I'm Matias 'Niryx' Pose, a passionate creator and indie developer based in Argentina. I love bringing ideas to life through innovative projects, whether it's game development, web design, or other creative endeavors. When I'm not coding, you can find me exploring new technologies or sharing my work with the community.",
-                "explore-projects": "Explore My Projects",
-                "x-updates": "Latest Updates from X",
+                "nekophoria-title": "Nekophoria",
+                "nekophoria-desc": "A spiritual successor to Nekopara, set in a cozy cat-girl café.",
+                "colorfulhearts-title": "Colorful Hearts",
+                "colorfulhearts-desc": "A heartwarming visual novel with colorful emotions.",
+                "view-project": "View Project",
+                "news": "News",
+                "news-placeholder": "Stay tuned for updates on Niryx Works projects!",
+                "x-updates": "Twitter",
                 "footer": "© 2025 Niryx Works. All rights reserved."
             },
             es: {
@@ -79,13 +123,14 @@
                 "nav-team": "Equipo",
                 "nav-contact": "Contacto",
                 "welcome": "Bienvenido a Niryx Works",
-                "welcome-subtitle": "Dando vida a la creatividad y la innovación a través de proyectos emocionantes.",
-                "created-by": "Creado por Matias 'Niryx' Pose.",
-                "follow-me": "Sígueme en:",
-                "about-me": "Sobre mí",
-                "about-me-text": "Hola, soy Matias 'Niryx' Pose, un creador apasionado y desarrollador independiente con sede en Argentina. Me encanta dar vida a ideas a través de proyectos innovadores, ya sea desarrollo de juegos, diseño web u otras iniciativas creativas. Cuando no estoy programando, puedes encontrarme explorando nuevas tecnologías o compartiendo mi trabajo con la comunidad.",
-                "explore-projects": "Explora mis proyectos",
-                "x-updates": "Últimas actualizaciones de X",
+                "nekophoria-title": "Nekophoria",
+                "nekophoria-desc": "Un sucesor espiritual de Nekopara, ambientado en un acogedor café de chicas gato.",
+                "colorfulhearts-title": "Colorful Hearts",
+                "colorfulhearts-desc": "Una novela visual conmovedora con emociones coloridas.",
+                "view-project": "Ver Proyecto",
+                "news": "Noticias",
+                "news-placeholder": "¡Mantente al tanto de las actualizaciones de los proyectos de Niryx Works!",
+                "x-updates": "Twitter",
                 "footer": "© 2025 Niryx Works. Todos los derechos reservados."
             },
             ja: {
@@ -94,13 +139,14 @@
                 "nav-team": "チーム",
                 "nav-contact": "連絡先",
                 "welcome": "Niryx Worksへようこそ",
-                "welcome-subtitle": "エキサイティングなプロジェクトを通じて創造性と革新を実現します。",
-                "created-by": "Matias 'Niryx' Poseによって作成されました。",
-                "follow-me": "フォローしてください：",
-                "about-me": "私について",
-                "about-me-text": "こんにちは、私はアルゼンチン在住の情熱的なクリエイター兼インディー開発者、Matias 'Niryx' Poseです。ゲーム開発、ウェブデザイン、その他の創造的な取り組みを通じて、革新的なプロジェクトでアイデアを実現するのが大好きです。コーディングしていないときは、新しい技術を探求したり、コミュニティと私の作品を共有したりしています。",
-                "explore-projects": "私のプロジェクトを見る",
-                "x-updates": "Xからの最新アップデート",
+                "nekophoria-title": "Nekophoria",
+                "nekophoria-desc": "Nekoparaの精神的な後継作で、居心地の良い猫娘カフェが舞台です。",
+                "colorfulhearts-title": "Colorful Hearts",
+                "colorfulhearts-desc": "心温まるビジュアルノベルで、色とりどりの感情が溢れています。",
+                "view-project": "プロジェクトを見る",
+                "news": "ニュース",
+                "news-placeholder": "Niryx Worksのプロジェクトのアップデートにご期待ください！",
+                "x-updates": "Twitter",
                 "footer": "© 2025 Niryx Works. 全ての権利を保有します。"
             },
             zh: {
@@ -109,13 +155,14 @@
                 "nav-team": "团队",
                 "nav-contact": "联系方式",
                 "welcome": "欢迎体验Niryx Works",
-                "welcome-subtitle": "通过激动人心的项目将创意与创新变为现实。",
-                "created-by": "由Matias 'Niryx' Pose创建。",
-                "follow-me": "关注我：",
-                "about-me": "关于我",
-                "about-me-text": "你好，我是Matias 'Niryx' Pose，一位住在阿根廷的充满激情的创作者和独立开发者。我喜欢通过创新项目将想法变为现实，无论是游戏开发、网页设计还是其他创意工作。不写代码的时候，你可能会发现我在探索新技术或与社区分享我的作品。",
-                "explore-projects": "探索我的项目",
-                "x-updates": "来自X的最新更新",
+                "nekophoria-title": "Nekophoria",
+                "nekophoria-desc": "Nekopara的精神续作，背景设定在一个温馨的猫娘咖啡馆。",
+                "colorfulhearts-title": "Colorful Hearts",
+                "colorfulhearts-desc": "一款充满多彩情感的温馨视觉小说。",
+                "view-project": "查看项目",
+                "news": "新闻",
+                "news-placeholder": "请关注Niryx Works项目的更新！",
+                "x-updates": "Twitter",
                 "footer": "© 2025 Niryx Works. 保留所有权利。"
             }
         };
