@@ -11,47 +11,66 @@
 </head>
 <body>
     <header>
-        <select class="language-selector" id="language-selector">
-            <option value="en">English</option>
-            <option value="es">Español</option>
-            <option value="ja">日本語</option>
-            <option value="zh">中文</option>
-        </select>
-        <button class="theme-toggle" id="theme-toggle" title="Toggle Theme">
-            <i class="fas fa-sun"></i>
-        </button>
-        <img src="images/NiryxWorksLogo.png" alt="Niryx Works Logo" class="logo">
-        <nav>
-            <a href="index.html" data-i18n="nav-home">Home</a>
-            <a href="projects.html" data-i18n="nav-projects">Projects</a>
-            <a href="team.html" data-i18n="nav-team">Team</a>
-            <a href="contact.html" data-i18n="nav-contact">Contact</a>
-        </nav>
+        <div class="header-left">
+            <img src="images/NiryxWorksLogo.png" alt="Niryx Works Logo" class="logo">
+        </div>
+        <div class="header-right">
+            <select class="language-selector" id="language-selector">
+                <option value="en">English</option>
+                <option value="es">Español</option>
+                <option value="ja">日本語</option>
+                <option value="zh">中文</option>
+            </select>
+            <button class="theme-toggle" id="theme-toggle" title="Toggle Theme">
+                <i class="fas fa-sun"></i>
+            </button>
+            <nav>
+                <a href="index.html" data-i18n="nav-home">Home</a>
+                <a href="projects.html" data-i18n="nav-projects">Projects</a>
+                <a href="team.html" data-i18n="nav-team">Team</a>
+                <a href="contact.html" data-i18n="nav-contact">Contact</a>
+            </nav>
+        </div>
     </header>
     <main>
         <h2 data-i18n="projects-title">My Projects</h2>
         <p data-i18n="projects-subtitle">Here are some of the projects I've been working on at Niryx Works.</p>
-        <div class="proyectos-container">
-            <div class="proyecto">
-                <img src="images/project1.jpg" alt="Project 1">
-                <h3 data-i18n="project1-title">Project 1</h3>
-                <p data-i18n="project1-desc">A cool project I worked on recently. Check it out!</p>
+        <div class="projects-container">
+            <div class="project-card">
+                <img src="images/nekophoria-thumb.jpg" alt="Nekophoria">
+                <h3 data-i18n="nekophoria-title">Nekophoria</h3>
+                <p data-i18n="nekophoria-desc">A spiritual successor to Nekopara, set in a cozy cat-girl café.</p>
+                <a href="projects.html" class="project-link" data-i18n="view-project">View Project</a>
             </div>
-            <div class="proyecto">
-                <img src="images/project2.jpg" alt="Project 2">
-                <h3 data-i18n="project2-title">Project 2</h3>
-                <p data-i18n="project2-desc">Another exciting project with innovative features.</p>
-            </div>
-            <div class="proyecto">
-                <img src="images/project3.jpg" alt="Project 3">
-                <h3 data-i18n="project3-title">Project 3</h3>
-                <p data-i18n="project3-desc">A game development project I'm really proud of.</p>
+            <div class="project-card">
+                <img src="images/colorfulhearts-thumb.jpg" alt="Colorful Hearts">
+                <h3 data-i18n="colorfulhearts-title">Colorful Hearts</h3>
+                <p data-i18n="colorfulhearts-desc">A heartwarming visual novel with colorful emotions.</p>
+                <a href="projects.html" class="project-link" data-i18n="view-project">View Project</a>
             </div>
         </div>
         <a href="index.html" class="cta-button" data-i18n="back-to-home">Back to Home</a>
     </main>
     <footer>
-        <p data-i18n="footer">© 2025 Niryx Works. All rights reserved.</p>
+        <div class="footer-left">
+            <img src="images/NiryxWorksLogo.png" alt="Niryx Works Logo" class="footer-logo">
+        </div>
+        <div class="footer-center">
+            <p data-i18n="footer">© 2025 Niryx Works. All rights reserved.</p>
+            <nav>
+                <a href="index.html" data-i18n="nav-home">Home</a>
+                <a href="projects.html" data-i18n="nav-projects">Projects</a>
+                <a href="team.html" data-i18n="nav-team">Team</a>
+                <a href="contact.html" data-i18n="nav-contact">Contact</a>
+            </nav>
+        </div>
+        <div class="footer-right">
+            <div class="social-links">
+                <a href="https://www.instagram.com/niryxgames/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="https://x.com/NiryxWorks" target="_blank" class="social-icon"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://www.youtube.com/@NiryxWorks" target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
     </footer>
     <button class="back-to-top" onclick="scrollToTop()">
         <i class="fas fa-arrow-up"></i>
@@ -67,12 +86,11 @@
                 "nav-contact": "Contact",
                 "projects-title": "My Projects",
                 "projects-subtitle": "Here are some of the projects I've been working on at Niryx Works.",
-                "project1-title": "Project 1",
-                "project1-desc": "A cool project I worked on recently. Check it out!",
-                "project2-title": "Project 2",
-                "project2-desc": "Another exciting project with innovative features.",
-                "project3-title": "Project 3",
-                "project3-desc": "A game development project I'm really proud of.",
+                "nekophoria-title": "Nekophoria",
+                "nekophoria-desc": "A spiritual successor to Nekopara, set in a cozy cat-girl café.",
+                "colorfulhearts-title": "Colorful Hearts",
+                "colorfulhearts-desc": "A heartwarming visual novel with colorful emotions.",
+                "view-project": "View Project",
                 "back-to-home": "Back to Home",
                 "footer": "© 2025 Niryx Works. All rights reserved."
             },
@@ -83,12 +101,11 @@
                 "nav-contact": "Contacto",
                 "projects-title": "Mis Proyectos",
                 "projects-subtitle": "Aquí hay algunos de los proyectos en los que he estado trabajando en Niryx Works.",
-                "project1-title": "Proyecto 1",
-                "project1-desc": "Un proyecto genial en el que trabajé recientemente. ¡Échale un vistazo!",
-                "project2-title": "Proyecto 2",
-                "project2-desc": "Otro proyecto emocionante con características innovadoras.",
-                "project3-title": "Proyecto 3",
-                "project3-desc": "Un proyecto de desarrollo de juegos del que estoy muy orgulloso.",
+                "nekophoria-title": "Nekophoria",
+                "nekophoria-desc": "Un sucesor espiritual de Nekopara, ambientado en un acogedor café de chicas gato.",
+                "colorfulhearts-title": "Colorful Hearts",
+                "colorfulhearts-desc": "Una novela visual conmovedora con emociones coloridas.",
+                "view-project": "Ver Proyecto",
                 "back-to-home": "Volver al Inicio",
                 "footer": "© 2025 Niryx Works. Todos los derechos reservados."
             },
@@ -99,12 +116,11 @@
                 "nav-contact": "連絡先",
                 "projects-title": "私のプロジェクト",
                 "projects-subtitle": "Niryx Worksで取り組んでいるプロジェクトの一部をご紹介します。",
-                "project1-title": "プロジェクト1",
-                "project1-desc": "最近取り組んだクールなプロジェクト。ぜひご覧ください！",
-                "project2-title": "プロジェクト2",
-                "project2-desc": "革新的な機能を備えたもう一つのエキサイティングなプロジェクト。",
-                "project3-title": "プロジェクト3",
-                "project3-desc": "とても誇りに思うゲーム開発プロジェクト。",
+                "nekophoria-title": "Nekophoria",
+                "nekophoria-desc": "Nekoparaの精神的な後継作で、居心地の良い猫娘カフェが舞台です。",
+                "colorfulhearts-title": "Colorful Hearts",
+                "colorfulhearts-desc": "心温まるビジュアルノベルで、色とりどりの感情が溢れています。",
+                "view-project": "プロジェクトを見る",
                 "back-to-home": "ホームに戻る",
                 "footer": "© 2025 Niryx Works. 全ての権利を保有します。"
             },
@@ -115,12 +131,11 @@
                 "nav-contact": "联系方式",
                 "projects-title": "我的项目",
                 "projects-subtitle": "以下是我在Niryx Works进行的一些项目。",
-                "project1-title": "项目1",
-                "project1-desc": "我最近完成的一个很酷的项目。快来看看吧！",
-                "project2-title": "项目2",
-                "project2-desc": "另一个具有创新功能的激动人心的项目。",
-                "project3-title": "项目3",
-                "project3-desc": "一个让我非常骄傲的游戏开发项目。",
+                "nekophoria-title": "Nekophoria",
+                "nekophoria-desc": "Nekopara的精神续作，背景设定在一个温馨的猫娘咖啡馆。",
+                "colorfulhearts-title": "Colorful Hearts",
+                "colorfulhearts-desc": "一款充满多彩情感的温馨视觉小说。",
+                "view-project": "查看项目",
                 "back-to-home": "返回首页",
                 "footer": "© 2025 Niryx Works. 保留所有权利。"
             }
