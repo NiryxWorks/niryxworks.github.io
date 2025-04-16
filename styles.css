@@ -531,11 +531,12 @@ footer {
 
 .jumpscare {
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(1.5);
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
     z-index: 9999;
-    animation: scareAnim 0.0s ease-in-out;
 }
 
 @keyframes scareAnim {
