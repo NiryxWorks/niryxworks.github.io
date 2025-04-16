@@ -210,13 +210,13 @@
     </script>
    <script>
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'j') { // Presionar la tecla "j" activa el jumpscare
+        if (e.key === 'm') {
             const img = document.createElement('img');
-            img.src = 'images/jumpscare.png'; // Asegurate de tener esta imagen
+            img.src = 'images/jumpscare.png'; 
             img.classList.add('jumpscare');
             document.body.appendChild(img);
-            setTimeout(() => img.remove(), 2000); // Se elimina después de 2 segundos
-            const scream = new Audio('sounds/scream.mp3'); // Asegurate de tener este sonido
+            setTimeout(() => img.remove(), 2000);
+            const scream = new Audio('sounds/scream.mp3'); 
             scream.play();
         }
     });
