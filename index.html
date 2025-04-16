@@ -208,5 +208,18 @@
             themeToggle.innerHTML = newTheme === 'dark' ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>';
         });
     </script>
+   <script>
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'j') { // Presionar la tecla "j" activa el jumpscare
+            const img = document.createElement('img');
+            img.src = 'images/jumpscare.png'; // Asegurate de tener esta imagen
+            img.classList.add('jumpscare');
+            document.body.appendChild(img);
+            setTimeout(() => img.remove(), 2000); // Se elimina después de 2 segundos
+            const scream = new Audio('sounds/scream.mp3'); // Asegurate de tener este sonido
+            scream.play();
+        }
+    });
+</script> 
 </body>
 </html>
