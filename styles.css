@@ -375,7 +375,11 @@ footer {
     color: #e0e0e0;
 }
 
-.dark-theme header,
+.dark-theme header {
+    background-color: #222;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
 .dark-theme footer {
     background-color: #222;
     color: #e0e0e0;
