@@ -9,6 +9,7 @@ body {
     transition: background 0.3s ease, color 0.3s ease;
 }
 
+/* Header */
 header {
     display: flex;
     justify-content: space-between;
@@ -16,6 +17,7 @@ header {
     background-color: #fff;
     padding: 20px 40px;
     transition: background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .header-left {
@@ -23,36 +25,19 @@ header {
 }
 
 .logo {
-    width: 150px;
+    width: 180px; /* Aumentamos el tamaño para que el logo sea más prominente */
     height: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05); /* Efecto sutil al pasar el ratón */
 }
 
 .header-right {
     display: flex;
     align-items: center;
     gap: 20px;
-}
-
-nav {
-    display: flex;
-    gap: 20px;
-}
-
-nav a {
-    color: #ff0000;
-    text-decoration: none;
-    font-size: 1.1em;
-    font-weight: 600;
-    transition: color 0.3s ease;
-}
-
-nav a:hover {
-    color: #b22222;
-}
-
-main {
-    padding: 20px 40px;
-    text-align: center;
 }
 
 /* Hero Section */
