@@ -148,6 +148,7 @@ main {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    background-color: #ffe6e6; /* Fondo rosa claro como en la captura */
 }
 
 .news-section, .x-feed-section {
@@ -185,7 +186,7 @@ main {
 }
 
 .sk-ww-twitter-feed {
-    max-width: 500px; /* Más estrecho para alinearse con "News" */
+    max-width: 500px; /* Ancho fijo para la columna */
     margin: 0 auto;
     background-color: #fff;
     border-radius: 8px;
@@ -193,13 +194,36 @@ main {
     padding: 10px;
 }
 
-.sk-ww-twitter-feed .sk-post {
-    border-bottom: 1px solid #eee;
-    padding: 10px;
-    font-family: 'Open Sans', sans-serif;
+/* Forzar una sola columna */
+.sk-ww-twitter-feed, 
+.sk-ww-twitter-feed * {
+    column-count: 1 !important; /* Anula múltiples columnas */
+    column-gap: 0 !important;
+    display: block !important; /* Cambia de grid/flex a block */
 }
 
-.sk-ww-twitter-feed a {
+/* Estilizar cada publicación */
+.sk-ww-twitter-feed .sk-post {
+    width: 100%;
+    border-bottom: 1px solid #eee;
+    padding: 15px;
+    margin-bottom: 10px;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+/* Asegurar que las imágenes y contenido no se desborden */
+.sk-ww-twitter-feed .sk-post img,
+.sk-ww-twitter-feed .sk-post video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Estilizar enlaces y botones */
+.sk-ww-twitter-feed a,
+.sk-ww-twitter-feed a:visited {
     color: #c81e1e; /* Rojo de Niryx Works */
     text-decoration: none;
 }
@@ -208,6 +232,20 @@ main {
     color: #a31818; /* Rojo más oscuro */
 }
 
+/* Botón "Follow" */
+.sk-ww-twitter-feed .sk-follow-button {
+    background-color: #c81e1e;
+    color: #fff;
+    border-radius: 5px;
+    padding: 8px 16px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.sk-ww-twitter-feed .sk-follow-button:hover {
+    background-color: #a31818;
+}
+
+/* Botón "View more on X" */
 .cta-button {
     display: block;
     padding: 10px 20px;
@@ -227,6 +265,7 @@ main {
     background-color: #a31818;
 }
 
+/* Responsividad */
 @media (max-width: 768px) {
     .news-and-feed {
         flex-direction: column;
