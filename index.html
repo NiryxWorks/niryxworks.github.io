@@ -60,20 +60,13 @@
             </div>
         </section>
 
-        <!-- News and X Feed -->
+        <!-- News Section -->
         <section class="news-and-feed">
             <div class="news-section">
                 <h2 data-i18n="news">News</h2>
                 <div class="news-content">
                     <p data-i18n="news-placeholder">Stay tuned for updates on Niryx Works projects!</p>
-                </div>
-            </div>
-            <div class="x-feed-section">
-                <h2 data-i18n="x-updates">X Updates</h2>
-                <div class="x-feed">
-                    <p data-i18n="x-placeholder">Check out the latest from @NiryxWorks!</p>
-                    <div class="sk-ww-twitter-feed" data-embed-id="25547592"></div>
-                    <a href="https://x.com/NiryxWorks" target="_blank" class="cta-button" data-i18n="view-on-x">View more on X</a>
+                    <p data-i18n="follow-x">Follow us on <a href="https://x.com/NiryxWorks" target="_blank">X</a> for the latest news!</p>
                 </div>
             </div>
         </section>
@@ -107,7 +100,6 @@
     <button class="back-to-top" onclick="scrollToTop()">
         <i class="fas fa-arrow-up"></i>
     </button>
-    <script src="https://widgets.sociablekit.com/twitter-feed/widget.js" defer></script>
     <script>
         // Traducciones
         const translations = {
@@ -124,9 +116,7 @@
                 "view-project": "View Project",
                 "news": "News",
                 "news-placeholder": "Stay tuned for updates on Niryx Works projects!",
-                "x-updates": "X Updates",
-                "x-placeholder": "Check out the latest from @NiryxWorks!",
-                "view-on-x": "View more on X",
+                "follow-x": "Follow us on <a href=\"https://x.com/NiryxWorks\" target=\"_blank\">X</a> for the latest news!",
                 "footer": "© 2025 Niryx Works. All rights reserved."
             },
             es: {
@@ -142,9 +132,7 @@
                 "view-project": "Ver Proyecto",
                 "news": "Noticias",
                 "news-placeholder": "¡Mantente al tanto de las actualizaciones de los proyectos de Niryx Works!",
-                "x-updates": "Actualizaciones de X",
-                "x-placeholder": "¡Mira lo último de @NiryxWorks!",
-                "view-on-x": "Ver más en X",
+                "follow-x": "¡Síguenos en <a href=\"https://x.com/NiryxWorks\" target=\"_blank\">X</a> para las últimas noticias!",
                 "footer": "© 2025 Niryx Works. Todos los derechos reservados."
             },
             ja: {
@@ -160,9 +148,7 @@
                 "view-project": "プロジェクトを見る",
                 "news": "ニュース",
                 "news-placeholder": "Niryx Worksのプロジェクトのアップデートにご期待ください！",
-                "x-updates": "Xアップデート",
-                "x-placeholder": "@NiryxWorksの最新情報をチェック！",
-                "view-on-x": "Xでさらに見る",
+                "follow-x": "<a href=\"https://x.com/NiryxWorks\" target=\"_blank\">X</a>で最新ニュースをフォローしてください！",
                 "footer": "© 2025 Niryx Works. 全ての権利を保有します。"
             },
             zh: {
@@ -178,9 +164,7 @@
                 "view-project": "查看项目",
                 "news": "新闻",
                 "news-placeholder": "请关注Niryx Works项目的更新！",
-                "x-updates": "X更新",
-                "x-placeholder": "查看@NiryxWorks的最新动态！",
-                "view-on-x": "在X上查看更多",
+                "follow-x": "在<a href=\"https://x.com/NiryxWorks\" target=\"_blank\">X</a>上关注我们以获取最新消息！",
                 "footer": "© 2025 Niryx Works. 保留所有权利。"
             }
         };
@@ -189,7 +173,11 @@
         function setLanguage(lang) {
             document.querySelectorAll('[data-i18n]').forEach(element => {
                 const key = element.getAttribute('data-i18n');
-                element.textContent = translations[lang][key];
+                if (key === 'follow-x') {
+                    element.innerHTML = translations[lang][key];
+                } else {
+                    element.textContent = translations[lang][key];
+                }
             });
             document.documentElement.lang = lang;
             localStorage.setItem('language', lang);
@@ -222,7 +210,7 @@
         };
 
         // Cargar el tema guardado al iniciar la página
-        const html = documentElement;
+        const html = document.documentElement;
         const themeToggle = document.getElementById('theme-toggle');
         const currentTheme = localStorage.getItem('theme') || 'light';
 
