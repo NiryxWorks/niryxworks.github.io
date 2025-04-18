@@ -13,21 +13,24 @@
 <body>
     <div id="gala-rain"></div>
     <header>
-        <div class="header-container">
-            <button class="menu-toggle" id="menu-toggle">
-                <i class="fas fa-bars"></i>
-            </button>
+        <div class="header-left">
+            <img src="images/NiryxWorksLogo.png" alt="Niryx Works Logo" class="logo">
+        </div>
+        <div class="header-right">
             <select class="language-selector" id="language-selector">
-                <option value="en">EN</option>
-                <option value="es">ES</option>
-                <option value="ja">JA</option>
-                <option value="zh">ZH</option>
+                <option value="en">English</option>
+                <option value="es">Español</option>
+                <option value="ja">日本語</option>
+                <option value="zh">中文</option>
             </select>
-            <nav class="nav-menu" id="nav-menu">
-                <a href="index.html" data-i18n="nav-home"><i class="fas fa-home"></i> Home</a>
-                <a href="projects.html" data-i18n="nav-projects"><i class="fas fa-folder"></i> Projects</a>
-                <a href="team.html" data-i18n="nav-team"><i class="fas fa-users"></i> Team</a>
-                <a href="contact.html" data-i18n="nav-contact"><i class="fas fa-envelope"></i> Contact</a>
+            <button class="theme-toggle" id="theme-toggle" title="Toggle Theme">
+                <i class="fas fa-sun"></i>
+            </button>
+            <nav>
+                <a href="index.html" data-i18n="nav-home">Home</a>
+                <a href="projects.html" data-i18n="nav-projects">Projects</a>
+                <a href="team.html" data-i18n="nav-team">Team</a>
+                <a href="contact.html" data-i18n="nav-contact">Contact</a>
             </nav>
         </div>
     </header>
@@ -37,49 +40,61 @@
             <div class="hero-image">
                 <img src="images/nekophoria-hero.jpg" alt="Nekophoria Hero Image">
             </div>
-            <div class="hero-content">
-                <img src="images/NiryxWorksLogo.png" alt="Niryx Works Logo" class="hero-logo">
-                <h1 data-i18n="welcome">Welcome to Niryx Works</h1>
-            </div>
+            <h1 data-i18n="welcome">Welcome to Niryx Works</h1>
         </section>
 
         <!-- Featured Projects -->
         <section class="featured-projects">
-            <div class="project-banner">
-                <img src="images/nekophoria-thumb.jpg" alt="Nekophoria">
-                <div class="banner-content">
+            <div class="projects-container">
+                <div class="project-card">
+                    <img src="images/nekophoria-thumb.jpg" alt="Nekophoria">
                     <h3 data-i18n="nekophoria-title">Nekophoria</h3>
                     <p data-i18n="nekophoria-desc">A spiritual successor to Nekopara, set in a cozy cat-girl café.</p>
-                    <a href="projects.html" class="banner-link" data-i18n="view-project">View Project</a>
+                    <a href="projects.html" class="project-link" data-i18n="view-project">View Project</a>
                 </div>
-            </div>
-            <div class="project-banner">
-                <img src="images/colorfulhearts-thumb.jpg" alt="Colorful Hearts">
-                <div class="banner-content">
+                <div class="project-card">
+                    <img src="images/colorfulhearts-thumb.jpg" alt="Colorful Hearts">
                     <h3 data-i18n="colorfulhearts-title">Colorful Hearts</h3>
                     <p data-i18n="colorfulhearts-desc">A heartwarming visual novel with colorful emotions.</p>
-                    <a href="projects.html" class="banner-link" data-i18n="view-project">View Project</a>
+                    <a href="projects.html" class="project-link" data-i18n="view-project">View Project</a>
                 </div>
             </div>
         </section>
 
         <!-- News Section -->
-        <section class="news-section">
-            <h2 data-i18n="news">News</h2>
-            <div class="news-content">
-                <p data-i18n="news-placeholder">Stay tuned for updates on Niryx Works projects!</p>
-                <p data-i18n="follow-x">Follow us on <a href="https://x.com/NiryxWorks" target="_blank">X</a> for the latest news!</p>
+        <section class="news-and-feed">
+            <div class="news-section">
+                <h2 data-i18n="news">News</h2>
+                <div class="news-content">
+                    <p data-i18n="news-placeholder">Stay tuned for updates on Niryx Works projects!</p>
+                    <p data-i18n="follow-x">Follow us on <a href="https://x.com/NiryxWorks" target="_blank">X</a> for the latest news!</p>
+                </div>
             </div>
         </section>
     </main>
     <footer>
         <div class="footer-container">
-            <img src="images/NiryxWorksLogo.png" alt="Niryx Works Logo" class="footer-logo">
-            <p data-i18n="footer">© 2025 Niryx Works. All rights reserved.</p>
-            <div class="social-links">
-                <a href="https://www.instagram.com/niryxgames/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
-                <a href="https://x.com/NiryxWorks" target="_blank" class="social-icon"><i class="fab fa-x-twitter"></i></a>
-                <a href="https://www.youtube.com/@NiryxWorks" target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
+            <div class="footer-left">
+                <img src="images/NiryxWorksLogo.png" alt="Niryx Works Logo" class="footer-logo">
+            </div>
+            <div class="footer-center">
+                <p data-i18n="footer">© 2025 Niryx Works. All rights reserved.</p>
+                <nav>
+                    <a href="index.html" data-i18n="nav-home">Home</a>
+                    <span>|</span>
+                    <a href="projects.html" data-i18n="nav-projects">Projects</a>
+                    <span>|</span>
+                    <a href="team.html" data-i18n="nav-team">Team</a>
+                    <span>|</span>
+                    <a href="contact.html" data-i18n="nav-contact">Contact</a>
+                </nav>
+            </div>
+            <div class="footer-right">
+                <div class="social-links">
+                    <a href="https://www.instagram.com/niryxgames/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="https://x.com/NiryxWorks" target="_blank" class="social-icon"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://www.youtube.com/@NiryxWorks" target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
+                </div>
             </div>
         </div>
     </footer>
@@ -195,12 +210,24 @@
             }
         };
 
-        // Menú hamburguesa
-        const menuToggle = document.getElementById('menu-toggle');
-        const navMenu = document.getElementById('nav-menu');
-        menuToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            menuToggle.innerHTML = navMenu.classList.contains('active') ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        // Cargar el tema guardado al iniciar la página
+        const html = document.documentElement;
+        const themeToggle = document.getElementById('theme-toggle');
+        const currentTheme = localStorage.getItem('theme') || 'light';
+
+        if (currentTheme === 'dark') {
+            html.classList.add('dark-theme');
+            themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        } else {
+            themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        }
+
+        // Alternar tema al hacer clic en el botón
+        themeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark-theme');
+            const newTheme = html.classList.contains('dark-theme') ? 'dark' : 'light';
+            localStorage.setItem('theme', newTheme);
+            themeToggle.innerHTML = newTheme === 'dark' ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>';
         });
 
         // Easter Egg: Lluvia de Gala Milanesa
@@ -209,16 +236,16 @@
             keysTyped += e.key.toLowerCase();
             if (keysTyped.includes('gala')) {
                 triggerGalaRain();
-                keysTyped = '';
+                keysTyped = ''; // Resetear para permitir más activaciones
             }
         });
 
         function triggerGalaRain() {
             const galaContainer = document.getElementById('gala-rain');
-            const galaCount = 20;
+            const galaCount = 20; // Número de Galas que caerán
             const images = [
-                'images/gala-milanesa.png',
-                'images/gala-milanesa-alt.png'
+                'images/gala-milanesa.png', // Imagen principal de Gala
+                'images/gala-milanesa-alt.png' // Imagen alternativa (opcional)
             ];
 
             for (let i = 0; i < galaCount; i++) {
@@ -230,11 +257,13 @@
                 gala.style.animationDuration = 3 + Math.random() * 2 + 's';
                 galaContainer.appendChild(gala);
 
+                // Remover después de la animación
                 setTimeout(() => {
                     gala.remove();
                 }, 5000);
             }
 
+            // Mensaje opcional
             const message = document.createElement('div');
             message.className = 'gala-message';
             message.textContent = '¡Gala Milanesa al rescate!';
