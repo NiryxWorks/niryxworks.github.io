@@ -69,35 +69,43 @@
                 </div>
             </div>
             <div class="x-feed-section">
-                <h2 data-i18n="x-updates">Twitter</h2>
+                <h2 data-i18n="x-updates">X Updates</h2>
                 <div class="x-feed">
-                    <a class="twitter-timeline" href="https://twitter.com/NiryxWorks?ref_src=twsrc%5Etfw">Tweets by NiryxWorks</a>
+                    <a class="twitter-timeline" href="https://twitter.com/NiryxWorks?ref_src=twsrc%5Etfw" data-height="400">Posts by NiryxWorks</a>
                     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                 </div>
             </div>
         </section>
     </main>
     <footer>
-        <div class="footer-left">
-            <img src="images/NiryxWorksLogo.png" alt="Niryx Works Logo" class="footer-logo">
-        </div>
-        <div class="footer-center">
-            <p data-i18n="footer">© 2025 Niryx Works. All rights reserved.</p>
-            <nav>
-                <a href="index.html" data-i18n="nav-home">Home</a>
-                <a href="projects.html" data-i18n="nav-projects">Projects</a>
-                <a href="team.html" data-i18n="nav-team">Team</a>
-                <a href="contact.html" data-i18n="nav-contact">Contact</a>
-            </nav>
-        </div>
-        <div class="footer-right">
-            <div class="social-links">
-                <a href="https://www.instagram.com/niryxgames/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
-                <a href="https://x.com/NiryxWorks" target="_blank" class="social-icon"><i class="fab fa-x-twitter"></i></a>
-                <a href="https://www.youtube.com/@NiryxWorks" target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
+        <div class="footer-container">
+            <div class="footer-left">
+                <img src="images/NiryxWorksLogo.png" alt="Niryx Works Logo" class="footer-logo">
+            </div>
+            <div class="footer-center">
+                <p data-i18n="footer">© 2025 Niryx Works. All rights reserved.</p>
+                <nav>
+                    <a href="index.html" data-i18n="nav-home">Home</a>
+                    <span>|</span>
+                    <a href="projects.html" data-i18n="nav-projects">Projects</a>
+                    <span>|</span>
+                    <a href="team.html" data-i18n="nav-team">Team</a>
+                    <span>|</span>
+                    <a href="contact.html" data-i18n="nav-contact">Contact</a>
+                </nav>
+            </div>
+            <div class="footer-right">
+                <div class="social-links">
+                    <a href="https://www.instagram.com/niryxgames/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="https://x.com/NiryxWorks" target="_blank" class="social-icon"><i class="fab fa-x-twitter"></i></a>
+                    <a href="https://www.youtube.com/@NiryxWorks" target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
+                </div>
             </div>
         </div>
     </footer>
+    <button class="back-to-top" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </button>
     <script>
         // Traducciones
         const translations = {
@@ -114,7 +122,7 @@
                 "view-project": "View Project",
                 "news": "News",
                 "news-placeholder": "Stay tuned for updates on Niryx Works projects!",
-                "x-updates": "Twitter",
+                "x-updates": "X Updates",
                 "footer": "© 2025 Niryx Works. All rights reserved."
             },
             es: {
@@ -130,7 +138,7 @@
                 "view-project": "Ver Proyecto",
                 "news": "Noticias",
                 "news-placeholder": "¡Mantente al tanto de las actualizaciones de los proyectos de Niryx Works!",
-                "x-updates": "Twitter",
+                "x-updates": "Actualizaciones de X",
                 "footer": "© 2025 Niryx Works. Todos los derechos reservados."
             },
             ja: {
@@ -146,7 +154,7 @@
                 "view-project": "プロジェクトを見る",
                 "news": "ニュース",
                 "news-placeholder": "Niryx Worksのプロジェクトのアップデートにご期待ください！",
-                "x-updates": "Twitter",
+                "x-updates": "Xアップデート",
                 "footer": "© 2025 Niryx Works. 全ての権利を保有します。"
             },
             zh: {
@@ -162,7 +170,7 @@
                 "view-project": "查看项目",
                 "news": "新闻",
                 "news-placeholder": "请关注Niryx Works项目的更新！",
-                "x-updates": "Twitter",
+                "x-updates": "X更新",
                 "footer": "© 2025 Niryx Works. 保留所有权利。"
             }
         };
@@ -187,6 +195,21 @@
         languageSelector.addEventListener('change', (e) => {
             setLanguage(e.target.value);
         });
+
+        // Función para volver al inicio de la página
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Mostrar u ocultar el botón según el desplazamiento
+        window.onscroll = function() {
+            const button = document.querySelector('.back-to-top');
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                button.style.display = 'block';
+            } else {
+                button.style.display = 'none';
+            }
+        };
 
         // Cargar el tema guardado al iniciar la página
         const html = document.documentElement;
