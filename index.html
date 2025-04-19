@@ -242,7 +242,7 @@
 
         function triggerGalaRain() {
             const galaContainer = document.getElementById('gala-rain');
-            const galaCount = 50; // Reducido para no saturar
+            const galaCount = 100; // Reducido para no saturar
             const images = [
                 'images/GalaMilanesa.png',
                 'images/GalaHead.png'
@@ -254,19 +254,19 @@
                 gala.className = 'gala-milanesa';
                 gala.style.left = Math.random() * 100 + 'vw';
                 gala.style.animationDelay = Math.random() * 2 + 's';
-                gala.style.animationDuration = 3 + Math.random() * 2 + 's';
+                gala.style.animationDuration = 10 + Math.random() * 2 + 's';
                 galaContainer.appendChild(gala);
 
                 // Remover después de la animación
                 setTimeout(() => {
                     gala.remove();
-                }, 5000);
+                }, 10000);
             }
 
             // Mensaje
             const message = document.createElement('div');
             message.className = 'gala-message';
-            message.textContent = '¡Gala Milanesa al rescate!';
+            message.textContent = 'Gala Milanesa!';
             galaContainer.appendChild(message);
             setTimeout(() => {
                 message.remove();
