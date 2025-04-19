@@ -377,25 +377,6 @@ footer {
     color: #ffe6e6;
 }
 
-/* Toque decorativo: patrón de huellas de gato (placeholder) */
-footer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('images/paw-pattern.png'); /* Placeholder, reemplaza con tu imagen */
-    background-repeat: repeat;
-    opacity: 0.1;
-    z-index: 0;
-}
-
-.footer-container {
-    position: relative;
-    z-index: 1;
-}
-
 /* Ajustes para el tema oscuro */
 .dark-theme footer {
     background-color: #2a2a2a; /* Marrón oscuro para el tema oscuro */
@@ -688,29 +669,4 @@ footer::before {
 .dark-theme .gala-message {
     background-color: #ff5555; /* Rojo más claro en tema oscuro */
     color: #e0e0e0;
-}
-
-/* Ajustes para móviles */
-@media (max-width: 768px) {
-    .gala-milanesa {
-        width: 30px; /* Más pequeño en móviles */
-        height: 30px;
-    }
-
-    .gala-message {
-        font-size: 0.9em;
-        padding: 8px 15px;
-    }
-}
-
-@media (max-width: 600px) {
-    .gala-milanesa {
-        width: 25px; /* Aún más pequeño en pantallas pequeñas */
-        height: 25px;
-    }
-
-    .gala-message {
-        font-size: 0.8em;
-        padding: 6px 12px;
-    }
 }
