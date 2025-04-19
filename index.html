@@ -126,47 +126,5 @@
         localStorage.setItem('theme', newTheme);
         themeToggle.innerHTML = newTheme === 'dark' ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>';
     });
-
-    // Easter Egg: Lluvia de Gala Milanesa
-    let keysTyped = '';
-    document.addEventListener('keydown', (e) => {
-        keysTyped += e.key.toLowerCase();
-        if (keysTyped.includes('gala')) {
-            triggerGalaRain();
-            keysTyped = ''; // Resetear para permitir más activaciones
-        }
-    });
-
-    function triggerGalaRain() {
-        const galaContainer = document.getElementById('gala-rain');
-        const galaCount = 15; // Reducido de 20 a 15 para no saturar
-        const images = [
-            'images/GalaMilanesa.png', // Imagen corregida
-            'images/GalaHead.png'      // Imagen corregida
-        ];
-
-        for (let i = 0; i < galaCount; i++) {
-            const gala = document.createElement('img');
-            gala.src = images[Math.floor(Math.random() * images.length)];
-            gala.className = 'gala-milanesa';
-            gala.style.left = Math.random() * 100 + 'vw';
-            gala.style.animationDelay = Math.random() * 2 + 's';
-            gala.style.animationDuration = 3 + Math.random() * 2 + 's';
-            galaContainer.appendChild(gala);
-
-            // Remover después de la animación
-            setTimeout(() => {
-                gala.remove();
-            }, 5000);
-        }
-
-        // Mensaje
-        const message = document.createElement('div');
-        message.className = 'gala-message';
-        message.textContent = '¡Gala Milanesa al rescate!';
-        galaContainer.appendChild(message);
-        setTimeout(() => {
-            message.remove();
-        }, 3000);
     }
 </script>
