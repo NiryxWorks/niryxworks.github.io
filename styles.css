@@ -670,3 +670,12 @@ footer {
     background-color: #ff5555; /* Rojo más claro en tema oscuro */
     color: #e0e0e0;
 }
+
+.news-date {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 10px;
+}
+.dark-theme .news-date {
+    color: #bbb;
+}
