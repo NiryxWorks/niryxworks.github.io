@@ -1,277 +1,172 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Niryx Works - Creative projects and innovative solutions by Matias 'Niryx' Pose">
-    <title>Niryx Works</title>
-    <link rel="icon" href="images/Icon64.png" sizes="64x64" type="image/png">
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&family=Noto+Sans+JP:wght@400;700&family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-</head>
-<body>
-    <div id="gala-rain"></div>
-    <header>
-        <div class="header-left">
-            <img src="images/NiryxWorksLogo.png" alt="Niryx Works Logo" class="logo">
-        </div>
-        <div class="header-right">
-            <select class="language-selector" id="language-selector">
-                <option value="en">English</option>
-                <option value="es">Español</option>
-                <option value="ja">日本語</option>
-                <option value="zh">中文</option>
-            </select>
-            <button class="theme-toggle" id="theme-toggle" title="Toggle Theme">
-                <i class="fas fa-sun"></i>
-            </button>
-            <nav>
-                <a href="index.html" data-i18n="nav-home">Home</a>
-                <a href="projects.html" data-i18n="nav-projects">Projects</a>
-                <a href="team.html" data-i18n="nav-team">Team</a>
-                <a href="contact.html" data-i18n="nav-contact">Contact</a>
-            </nav>
-        </div>
-    </header>
-    <main>
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="hero-image">
-                <img src="images/nekophoria-hero.jpg" alt="Nekophoria Hero Image">
-            </div>
-            <h1 data-i18n="welcome">Welcome to Niryx Works</h1>
-        </section>
-
-        <!-- Featured Projects -->
-        <section class="featured-projects">
-            <div class="projects-container">
-                <div class="project-card">
-                    <img src="images/nekophoria-thumb.jpg" alt="Nekophoria">
-                    <h3 data-i18n="nekophoria-title">Nekophoria</h3>
-                    <p data-i18n="nekophoria-desc">A super cute game about cat girls running a cafe.</p>
-                    <a href="projects.html" class="project-link" data-i18n="view-project">View Project</a>
-                </div>
-                <div class="project-card">
-                    <img src="images/colorfulhearts-thumb.jpg" alt="Colorful Hearts">
-                    <h3 data-i18n="colorfulhearts-title">Colorful Hearts</h3>
-                    <p data-i18n="colorfulhearts-desc">A heartwarming visual novel with colorful emotions.</p>
-                    <a href="projects.html" class="project-link" data-i18n="view-project">View Project</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- News Section -->
-        <section class="news-and-feed">
-            <div class="news-section">
-                <h2 data-i18n="news">News</h2>
-                <div class="news-content">
-                    <p data-i18n="news-placeholder">Stay tuned for updates on Niryx Works projects!</p>
-                    <p data-i18n="follow-x">Follow us on <a href="https://x.com/NiryxWorks" target="_blank">X</a> for the latest news!</p>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <div class="footer-container">
-            <div class="footer-left">
-                <img src="images/NiryxWorksLogo.png" alt="Niryx Works Logo" class="footer-logo">
-            </div>
-            <div class="footer-center">
-                <p data-i18n="footer">© 2025 Niryx Works. All rights reserved.</p>
-                <nav>
-                    <a href="index.html" data-i18n="nav-home">Home</a>
-                    <span>|</span>
-                    <a href="projects.html" data-i18n="nav-projects">Projects</a>
-                    <span>|</span>
-                    <a href="team.html" data-i18n="nav-team">Team</a>
-                    <span>|</span>
-                    <a href="contact.html" data-i18n="nav-contact">Contact</a>
-                </nav>
-            </div>
-            <div class="footer-right">
-                <div class="social-links">
-                    <a href="https://www.instagram.com/niryxgames/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
-                    <a href="https://x.com/NiryxWorks" target="_blank" class="social-icon"><i class="fab fa-x-twitter"></i></a>
-                    <a href="https://www.youtube.com/@NiryxWorks" target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <button class="back-to-top" onclick="scrollToTop()">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-    <script>
-        // Traducciones
-        const translations = {
-            en: {
-                "nav-home": "Home",
-                "nav-projects": "Projects",
-                "nav-team": "Team",
-                "nav-contact": "Contact",
-                "welcome": "Welcome to Niryx Works",
-                "nekophoria-title": "Nekophoria",
-                "nekophoria-desc": "A super cute game about cat girls running a cafe.",
-                "colorfulhearts-title": "Colorful Hearts",
-                "colorfulhearts-desc": "A super cute visual novel about young adult romance in an art club.",
-                "view-project": "View Project",
-                "news": "News",
-                "news-placeholder": "Stay tuned for updates on Niryx Works projects!",
-                "follow-x": "Follow us on <a href=\"https://x.com/NiryxWorks\" target=\"_blank\">X</a> for the latest news!",
-                "footer": "© 2025 Niryx Works. All rights reserved."
-            },
-            es: {
-                "nav-home": "Inicio",
-                "nav-projects": "Proyectos",
-                "nav-team": "Equipo",
-                "nav-contact": "Contacto",
-                "welcome": "Bienvenido a Niryx Works",
-                "nekophoria-title": "Nekophoria",
-                "nekophoria-desc": "Un juego súper lindo sobre chicas gato que manejan una cafetería.",
-                "colorfulhearts-title": "Colorful Hearts",
-                "colorfulhearts-desc": "Una novela visual súper lindo sobre romance juvenil en un club de arte.",
-                "view-project": "Ver Proyecto",
-                "news": "Noticias",
-                "news-placeholder": "¡Mantente al tanto de las actualizaciones de los proyectos de Niryx Works!",
-                "follow-x": "¡Síguenos en <a href=\"https://x.com/NiryxWorks\" target=\"_blank\">X</a> para las últimas noticias!",
-                "footer": "© 2025 Niryx Works. Todos los derechos reservados."
-            },
-            ja: {
-                "nav-home": "ホーム",
-                "nav-projects": "プロジェクト",
-                "nav-team": "チーム",
-                "nav-contact": "連絡先",
-                "welcome": "Niryx Worksへようこそ",
-                "nekophoria-title": "Nekophoria",
-                "nekophoria-desc": "猫娘たちがカフェを経営する超かわいいゲーム。",
-                "colorfulhearts-title": "Colorful Hearts",
-                "colorfulhearts-desc": "美術クラブを舞台にした若者の恋愛を描いた、とてもキュートなビジュアルノベルです。",
-                "view-project": "プロジェクトを見る",
-                "news": "ニュース",
-                "news-placeholder": "Niryx Worksのプロジェクトのアップデートにご期待ください！",
-                "follow-x": "<a href=\"https://x.com/NiryxWorks\" target=\"_blank\">X</a>で最新ニュースをフォローしてください！",
-                "footer": "© 2025 Niryx Works. 全ての権利を保有します。"
-            },
-            zh: {
-                "nav-home": "首页",
-                "nav-projects": "项目",
-                "nav-team": "团队",
-                "nav-contact": "联系方式",
-                "welcome": "欢迎体验Niryx Works",
-                "nekophoria-title": "Nekophoria",
-                "nekophoria-desc": "一款关于猫女孩经营咖啡馆的超级可爱的游戏。",
-                "colorfulhearts-title": "Colorful Hearts",
-                "colorfulhearts-desc": "一部关于艺术俱乐部中年轻人浪漫故事的超级可爱的视觉小说。",
-                "view-project": "查看项目",
-                "news": "新闻",
-                "news-placeholder": "请关注Niryx Works项目的更新！",
-                "follow-x": "在<a href=\"https://x.com/NiryxWorks\" target=\"_blank\">X</a>上关注我们以获取最新消息！",
-                "footer": "© 2025 Niryx Works. 保留所有权利。"
-            }
-        };
-
-        // Función para cambiar el idioma
-        function setLanguage(lang) {
-            document.querySelectorAll('[data-i18n]').forEach(element => {
-                const key = element.getAttribute('data-i18n');
-                if (key === 'follow-x') {
-                    element.innerHTML = translations[lang][key];
-                } else {
-                    element.textContent = translations[lang][key];
-                }
-            });
-            document.documentElement.lang = lang;
-            localStorage.setItem('language', lang);
+<script>
+    // Traducciones
+    const translations = {
+        en: {
+            "nav-home": "Home",
+            "nav-projects": "Projects",
+            "nav-team": "Team",
+            "nav-contact": "Contact",
+            "welcome": "Welcome to Niryx Works",
+            "nekophoria-title": "Nekophoria",
+            "nekophoria-desc": "A super cute game about cat girls running a cafe.",
+            "colorfulhearts-title": "Colorful Hearts",
+            "colorfulhearts-desc": "A super cute visual novel about young adult romance in an art club.",
+            "view-project": "View Project",
+            "news": "News",
+            "news-placeholder": "Stay tuned for updates on Niryx Works projects!",
+            "follow-x": "Follow us on <a href=\"https://x.com/NiryxWorks\" target=\"_blank\">X</a> for the latest news!",
+            "footer": "© 2025 Niryx Works. All rights reserved."
+        },
+        es: {
+            "nav-home": "Inicio",
+            "nav-projects": "Proyectos",
+            "nav-team": "Equipo",
+            "nav-contact": "Contacto",
+            "welcome": "Bienvenido a Niryx Works",
+            "nekophoria-title": "Nekophoria",
+            "nekophoria-desc": "Un juego súper lindo sobre chicas gato que manejan una cafetería.",
+            "colorfulhearts-title": "Colorful Hearts",
+            "colorfulhearts-desc": "Una novela visual súper lindo sobre romance juvenil en un club de arte.",
+            "view-project": "Ver Proyecto",
+            "news": "Noticias",
+            "news-placeholder": "¡Mantente al tanto de las actualizaciones de los proyectos de Niryx Works!",
+            "follow-x": "¡Síguenos en <a href=\"https://x.com/NiryxWorks\" target=\"_blank\">X</a> para las últimas noticias!",
+            "footer": "© 2025 Niryx Works. Todos los derechos reservados."
+        },
+        ja: {
+            "nav-home": "ホーム",
+            "nav-projects": "プロジェクト",
+            "nav-team": "チーム",
+            "nav-contact": "連絡先",
+            "welcome": "Niryx Worksへようこそ",
+            "nekophoria-title": "Nekophoria",
+            "nekophoria-desc": "猫娘たちがカフェを経営する超かわいいゲーム。",
+            "colorfulhearts-title": "Colorful Hearts",
+            "colorfulhearts-desc": "美術クラブを舞台にした若者の恋愛を描いた、とてもキュートなビジュアルノベルです。",
+            "view-project": "プロジェクトを見る",
+            "news": "ニュース",
+            "news-placeholder": "Niryx Worksのプロジェクトのアップデートにご期待ください！",
+            "follow-x": "<a href=\"https://x.com/NiryxWorks\" target=\"_blank\">X</a>で最新ニュースをフォローしてください！",
+            "footer": "© 2025 Niryx Works. 全ての権利を保有します。"
+        },
+        zh: {
+            "nav-home": "首页",
+            "nav-projects": "项目",
+            "nav-team": "团队",
+            "nav-contact": "联系方式",
+            "welcome": "欢迎体验Niryx Works",
+            "nekophoria-title": "Nekophoria",
+            "nekophoria-desc": "一款关于猫女孩经营咖啡馆的超级可爱的游戏。",
+            "colorfulhearts-title": "Colorful Hearts",
+            "colorfulhearts-desc": "一部关于艺术俱乐部中年轻人浪漫故事的超级可爱的视觉小说。",
+            "view-project": "查看项目",
+            "news": "新闻",
+            "news-placeholder": "请关注Niryx Works项目的更新！",
+            "follow-x": "在<a href=\"https://x.com/NiryxWorks\" target=\"_blank\">X</a>上关注我们以获取最新消息！",
+            "footer": "© 2025 Niryx Works. 保留所有权利。"
         }
+    };
 
-        // Cargar el idioma guardado o el idioma por defecto (inglés)
-        const languageSelector = document.getElementById('language-selector');
-        const savedLanguage = localStorage.getItem('language') || 'en';
-        languageSelector.value = savedLanguage;
-        setLanguage(savedLanguage);
-
-        // Cambiar idioma al seleccionar una opción
-        languageSelector.addEventListener('change', (e) => {
-            setLanguage(e.target.value);
-        });
-
-        // Función para volver al inicio de la página
-        function scrollToTop() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-
-        // Mostrar u ocultar el botón según el desplazamiento
-        window.onscroll = function() {
-            const button = document.querySelector('.back-to-top');
-            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                button.style.display = 'block';
+    // Función para cambiar el idioma
+    function setLanguage(lang) {
+        document.querySelectorAll('[data-i18n]').forEach(element => {
+            const key = element.getAttribute('data-i18n');
+            if (key === 'follow-x') {
+                element.innerHTML = translations[lang][key];
             } else {
-                button.style.display = 'none';
+                element.textContent = translations[lang][key];
             }
-        };
+        });
+        document.documentElement.lang = lang;
+        localStorage.setItem('language', lang);
+    }
 
-        // Cargar el tema guardado al iniciar la página
-        const html = document.documentElement;
-        const themeToggle = document.getElementById('theme-toggle');
-        const currentTheme = localStorage.getItem('theme') || 'light';
+    // Cargar el idioma guardado o el idioma por defecto (inglés)
+    const languageSelector = document.getElementById('language-selector');
+    const savedLanguage = localStorage.getItem('language') || 'en';
+    languageSelector.value = savedLanguage;
+    setLanguage(savedLanguage);
 
-        if (currentTheme === 'dark') {
-            html.classList.add('dark-theme');
-            themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+    // Cambiar idioma al seleccionar una opción
+    languageSelector.addEventListener('change', (e) => {
+        setLanguage(e.target.value);
+    });
+
+    // Función para volver al inicio de la página
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Mostrar u ocultar el botón según el desplazamiento
+    window.onscroll = function() {
+        const button = document.querySelector('.back-to-top');
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            button.style.display = 'block';
         } else {
-            themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+            button.style.display = 'none';
         }
+    };
 
-        // Alternar tema al hacer clic en el botón
-        themeToggle.addEventListener('click', () => {
-            html.classList.toggle('dark-theme');
-            const newTheme = html.classList.contains('dark-theme') ? 'dark' : 'light';
-            localStorage.setItem('theme', newTheme);
-            themeToggle.innerHTML = newTheme === 'dark' ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>';
-        });
+    // Cargar el tema guardado al iniciar la página
+    const html = document.documentElement;
+    const themeToggle = document.getElementById('theme-toggle');
+    const currentTheme = localStorage.getItem('theme') || 'light';
 
-        // Easter Egg: Lluvia de Gala Milanesa
-        let keysTyped = '';
-        document.addEventListener('keydown', (e) => {
-            keysTyped += e.key.toLowerCase();
-            if (keysTyped.includes('gala')) {
-                triggerGalaRain();
-                keysTyped = ''; // Resetear para permitir más activaciones
-            }
-        });
+    if (currentTheme === 'dark') {
+        html.classList.add('dark-theme');
+        themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+    } else {
+        themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+    }
 
-        function triggerGalaRain() {
-            const galaContainer = document.getElementById('gala-rain');
-            const galaCount = 20; // Número de Galas que caerán
-            const images = [
-                'images/gala-milanesa.png', // Imagen principal de Gala
-                'images/gala-milanesa-alt.png' // Imagen alternativa (opcional)
-            ];
+    // Alternar tema al hacer clic en el botón
+    themeToggle.addEventListener('click', () => {
+        html.classList.toggle('dark-theme');
+        const newTheme = html.classList.contains('dark-theme') ? 'dark' : 'light';
+        localStorage.setItem('theme', newTheme);
+        themeToggle.innerHTML = newTheme === 'dark' ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>';
+    });
 
-            for (let i = 0; i < galaCount; i++) {
-                const gala = document.createElement('img');
-                gala.src = images[Math.floor(Math.random() * images.length)] || 'https://via.placeholder.com/50?text=🐶';
-                gala.className = 'gala-milanesa';
-                gala.style.left = Math.random() * 100 + 'vw';
-                gala.style.animationDelay = Math.random() * 2 + 's';
-                gala.style.animationDuration = 3 + Math.random() * 2 + 's';
-                galaContainer.appendChild(gala);
+    // Easter Egg: Lluvia de Gala Milanesa
+    let keysTyped = '';
+    document.addEventListener('keydown', (e) => {
+        keysTyped += e.key.toLowerCase();
+        if (keysTyped.includes('gala')) {
+            triggerGalaRain();
+            keysTyped = ''; // Resetear para permitir más activaciones
+        }
+    });
 
-                // Remover después de la animación
-                setTimeout(() => {
-                    gala.remove();
-                }, 5000);
-            }
+    function triggerGalaRain() {
+        const galaContainer = document.getElementById('gala-rain');
+        const galaCount = 15; // Reducido de 20 a 15 para no saturar
+        const images = [
+            'images/GalaMilanesa.png', // Imagen corregida
+            'images/GalaHead.png'      // Imagen corregida
+        ];
 
-            // Mensaje opcional
-            const message = document.createElement('div');
-            message.className = 'gala-message';
-            message.textContent = '¡Gala Milanesa al rescate!';
-            galaContainer.appendChild(message);
+        for (let i = 0; i < galaCount; i++) {
+            const gala = document.createElement('img');
+            gala.src = images[Math.floor(Math.random() * images.length)];
+            gala.className = 'gala-milanesa';
+            gala.style.left = Math.random() * 100 + 'vw';
+            gala.style.animationDelay = Math.random() * 2 + 's';
+            gala.style.animationDuration = 3 + Math.random() * 2 + 's';
+            galaContainer.appendChild(gala);
+
+            // Remover después de la animación
             setTimeout(() => {
-                message.remove();
-            }, 3000);
+                gala.remove();
+            }, 5000);
         }
-    </script>
-</body>
-</html>
+
+        // Mensaje
+        const message = document.createElement('div');
+        message.className = 'gala-message';
+        message.textContent = '¡Gala Milanesa al rescate!';
+        galaContainer.appendChild(message);
+        setTimeout(() => {
+            message.remove();
+        }, 3000);
+    }
+</script>
