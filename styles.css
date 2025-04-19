@@ -638,3 +638,79 @@ footer::before {
         text-align: center;
     }
 }
+
+/* Easter Egg de Gala Milanesa */
+#gala-rain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.gala-milanesa {
+    position: absolute;
+    width: 50px; /* Reducimos de 612px a 50px */
+    height: 50px;
+    animation: fall 5s linear forwards;
+    transform-origin: center;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.gala-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ff0000; /* Rojo de Niryx Works */
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10000;
+}
+
+/* Tema oscuro */
+.dark-theme .gala-message {
+    background-color: #ff5555; /* Rojo más claro en tema oscuro */
+    color: #e0e0e0;
+}
+
+/* Ajustes para móviles */
+@media (max-width: 768px) {
+    .gala-milanesa {
+        width: 30px; /* Más pequeño en móviles */
+        height: 30px;
+    }
+
+    .gala-message {
+        font-size: 0.9em;
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .gala-milanesa {
+        width: 25px; /* Aún más pequeño en pantallas pequeñas */
+        height: 25px;
+    }
+
+    .gala-message {
+        font-size: 0.8em;
+        padding: 6px 12px;
+    }
+}
