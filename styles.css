@@ -1,681 +1,115 @@
-/* Estilos generales - Tema claro por defecto */
+/* Importación de tipografías */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;600&display=swap');
+
+:root {
+  --color-primary: #38b6ff;
+  --color-secondary: #132a47;
+  --color-light: #f2f2f2;
+  --color-white: #ffffff;
+  --font-title: 'Orbitron', sans-serif;
+  --font-body: 'Poppins', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: 'Open Sans', sans-serif;
-    background: linear-gradient(135deg, #f5f5f5 0%, #ffcccc 50%, #fff 100%);
-    color: #333;
-    margin: 0;
-    padding: 0;
-    font-size: 16px;
-    transition: background 0.3s ease, color 0.3s ease;
+  font-family: var(--font-body);
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  line-height: 1.6;
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #fff;
-    padding: 20px 40px;
-    transition: background-color 0.3s ease;
-}
-
-.header-left {
-    flex: 1;
+  background: rgba(19, 42, 71, 0.8);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
-    width: 150px;
-    height: auto;
-}
-
-.header-right {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-nav {
-    display: flex;
-    gap: 20px;
+  font-family: var(--font-title);
+  font-size: 1.8rem;
+  color: var(--color-primary);
 }
 
 nav a {
-    color: #ff0000;
-    text-decoration: none;
-    font-size: 1.1em;
-    font-weight: 600;
-    transition: color 0.3s ease;
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: var(--color-white);
+  font-weight: 600;
+  transition: color 0.3s;
 }
 
 nav a:hover {
-    color: #b22222;
+  color: var(--color-primary);
 }
 
 main {
-    padding: 20px 40px;
-    text-align: center;
+  padding: 3rem 2rem;
 }
 
-/* Hero Section */
-.hero {
-    position: relative;
-    margin-bottom: 40px;
+section {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  margin-bottom: 2rem;
 }
 
-.hero-image img {
-    width: 100%;
-    height: auto;
-    max-height: 400px;
-    object-fit: cover;
-    filter: brightness(0.9);
+h1, h2 {
+  font-family: var(--font-title);
+  color: var(--color-primary);
+  margin-bottom: 1rem;
 }
 
-.hero h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2.5em;
-    color: #b22222;
-    margin: 20px 0;
-    transition: color 0.3s ease;
-}
-
-/* Featured Projects */
-.featured-projects {
-    margin: 40px 0;
-}
-
-.projects-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.project-card {
-    background-color: #fff5f5;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 300px;
-    padding: 15px;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.project-card:hover {
-    transform: scale(1.05);
-}
-
-.project-card img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-.project-card h3 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.2em;
-    color: #b22222;
-    margin: 10px 0;
-    transition: color 0.3s ease;
-}
-
-.project-card p {
-    font-size: 0.9em;
-    color: #333;
-    margin: 10px 0;
-    transition: color 0.3s ease;
-}
-
-.project-link {
-    display: inline-block;
-    padding: 8px 15px;
-    background-color: #ff0000;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 0.9em;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.project-link:hover {
-    background-color: #b22222;
-}
-
-/* Estilos para News Section */
-.news-and-feed {
-    max-width: 800px; /* Ancho más amplio para una sola columna */
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #ffe6e6; /* Fondo rosa claro como en la captura */
-}
-
-.news-section {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.news-section h2 {
-    color: #c81e1e; /* Rojo de Niryx Works */
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.8em;
-    margin-bottom: 15px;
-    border-bottom: 2px solid #c81e1e; /* Línea roja como en la captura */
-}
-
-.news-content p {
-    font-size: 1.1em;
-    color: #333;
-    font-family: 'Open Sans', sans-serif;
-    margin-bottom: 10px;
-}
-
-.news-content a {
-    color: #c81e1e;
-    text-decoration: none;
-}
-
-.news-content a:hover {
-    color: #a31818; /* Rojo más oscuro */
-}
-
-@media (max-width: 768px) {
-    .news-and-feed {
-        padding: 10px;
-    }
-
-    .news-section {
-        margin: 5px;
-        padding: 15px;
-    }
-}
-
-/* Team Section */
-h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2em;
-    color: #b22222;
-    margin-bottom: 20px;
-    transition: color 0.3s ease;
-}
-
-p {
-    font-size: 1.1em;
-    color: #333;
-    transition: color 0.3s ease;
-}
-
-.team-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.team-member {
-    background-color: #fff5f5;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 300px;
-    padding: 15px;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.team-member:hover {
-    transform: scale(1.05);
-}
-
-.team-avatar {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin: 0 auto 10px;
-    display: block;
-    object-fit: cover;
-}
-
-.team-member h3 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.2em;
-    color: #b22222;
-    margin: 8px 0;
-    transition: color 0.3s ease;
-}
-
-.team-member .role {
-    font-size: 0.9em;
-    color: #777;
-    margin: 5px 0;
-    transition: color 0.3s ease;
-}
-
-.team-links {
-    margin-top: 10px;
-}
-
-.team-icon {
-    color: #ff0000;
-    font-size: 1.5em;
-    margin: 0 10px;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.team-icon:hover {
-    color: #b22222;
-}
-
-/* CTA Button */
-.cta-button {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 30px;
-    background-color: #ff0000;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1.1em;
-    font-weight: 600;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.cta-button:hover {
-    background-color: #b22222;
-}
-
-/* Footer */
 footer {
-    background-color: #c81e1e; /* Rojo de Niryx Works, inspirado en Nekopara */
-    color: #fff;
-    padding: 30px 40px;
-    position: relative;
-    overflow: hidden;
-    transition: background-color 0.3s ease;
+  text-align: center;
+  padding: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  font-size: 0.9rem;
+  color: var(--color-light);
+  margin-top: 2rem;
 }
 
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    flex-wrap: wrap;
-    gap: 20px;
+/* Contact Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-.footer-left {
-    flex: 1;
+input, textarea {
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: none;
+  font-family: var(--font-body);
+  font-size: 1rem;
 }
 
-.footer-logo {
-    width: 150px; /* Tamaño más prominente pero equilibrado */
-    height: auto;
-    transition: transform 0.3s ease;
+input:focus, textarea:focus {
+  outline: 2px solid var(--color-primary);
 }
 
-.footer-logo:hover {
-    transform: scale(1.05); /* Efecto sutil de hover */
+button {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-.footer-center {
-    flex: 2;
-    text-align: center;
-}
-
-.footer-center p {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 0.9em;
-    margin: 10px 0;
-    color: #fff;
-    transition: color 0.3s ease;
-}
-
-.footer-center nav {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin-top: 10px;
-}
-
-.footer-center nav a {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 0.9em;
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.footer-center nav a:hover {
-    color: #ffe6e6; /* Rosa claro para hover */
-}
-
-.footer-center nav span {
-    color: #fff;
-    font-size: 0.9em;
-}
-
-.footer-right {
-    flex: 1;
-    text-align: right;
-}
-
-.social-links {
-    display: flex;
-    justify-content: flex-end;
-    gap: 15px;
-}
-
-.social-icon {
-    color: #fff;
-    font-size: 1.2em; /* Más pequeños para integrarse mejor */
-    transition: color 0.3s ease;
-}
-
-.social-icon:hover {
-    color: #ffe6e6;
-}
-
-/* Ajustes para el tema oscuro */
-.dark-theme footer {
-    background-color: #2a2a2a; /* Marrón oscuro para el tema oscuro */
-}
-
-.dark-theme .footer-center p,
-.dark-theme .footer-center nav a,
-.dark-theme .footer-center nav span,
-.dark-theme .social-icon {
-    color: #e0e0e0;
-}
-
-.dark-theme .footer-center nav a:hover,
-.dark-theme .social-icon:hover {
-    color: #ff5555; /* Rojo claro para hover en tema oscuro */
-}
-
-/* Ajustes para responsividad */
-@media (max-width: 600px) {
-    footer {
-        padding: 20px;
-    }
-
-    .footer-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .footer-left,
-    .footer-right {
-        margin: 10px 0;
-    }
-
-    .footer-right {
-        text-align: center;
-    }
-
-    .social-links {
-        justify-content: center;
-    }
-}
-
-/* Estilo para el selector de idioma */
-.language-selector {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1em;
-    padding: 5px;
-    border-radius: 5px;
-    border: 1px solid #ff0000;
-    background-color: #fff;
-    color: #333;
-    cursor: pointer;
-    transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
-}
-
-.language-selector:focus {
-    outline: none;
-    border-color: #b22222;
-}
-
-/* Ajustar el botón de tema para que no se superponga */
-.theme-toggle {
-    background: none;
-    border: none;
-    font-size: 1.5em;
-    cursor: pointer;
-    transition: color 0.3s ease;
-    color: #ff0000;
-}
-
-.theme-toggle:hover {
-    color: #b22222;
-}
-
-/* Estilos para el botón "Back to Top" */
-.back-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #ff0000;
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5em;
-    cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.back-to-top:hover {
-    background-color: #b22222;
-}
-
-/* Estilos para el tema oscuro */
-.dark-theme {
-    background: linear-gradient(135deg, #2a2a2a 0%, #4a2a2a 50%, #333 100%);
-    color: #e0e0e0;
-}
-
-.dark-theme header,
-.dark-theme footer {
-    background-color: #222;
-    color: #e0e0e0;
-}
-
-.dark-theme nav a {
-    color: #ff5555;
-}
-
-.dark-theme nav a:hover {
-    color: #ff9999;
-}
-
-.dark-theme .hero h1,
-.dark-theme .project-card h3,
-.dark-theme .news-section h2,
-.dark-theme .x-feed-section h2,
-.dark-theme h2,
-.dark-theme .team-member h3 {
-    color: #ff5555;
-    border-color: #ff5555;
-}
-
-.dark-theme p,
-.dark-theme .project-card p,
-.dark-theme .team-member .role,
-.dark-theme footer {
-    color: #e0e0e0;
-}
-
-.dark-theme .social-links .social-icon,
-.dark-theme .team-icon {
-    color: #ff5555;
-    background: #444;
-}
-
-.dark-theme .social-links .social-icon:hover,
-.dark-theme .team-icon:hover {
-    color: #ff9999;
-    background: #555;
-}
-
-.dark-theme .project-link,
-.dark-theme .cta-button,
-.dark-theme .back-to-top {
-    background-color: #ff5555;
-    color: #fff;
-}
-
-.dark-theme .project-link:hover,
-.dark-theme .cta-button:hover,
-.dark-theme .back-to-top:hover {
-    background-color: #ff9999;
-}
-
-.dark-theme .project-card,
-.dark-theme .news-section,
-.dark-theme .x-feed-section,
-.dark-theme .team-member {
-    background-color: #333;
-}
-
-.dark-theme .language-selector {
-    border: 1px solid #ff5555;
-    background-color: #333;
-    color: #e0e0e0;
-}
-
-.dark-theme .language-selector:focus {
-    border-color: #ff9999;
-}
-
-.dark-theme .theme-toggle {
-    color: #ff5555;
-}
-
-.dark-theme .theme-toggle:hover {
-    color: #ff9999;
-}
-
-/* Ajustes para responsividad */
-@media (max-width: 600px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 20px;
-    }
-
-    .header-right {
-        margin-top: 10px;
-        width: 100%;
-        justify-content: space-between;
-    }
-
-    nav {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    nav a {
-        display: block;
-        margin: 5px 0;
-    }
-
-    .hero h1,
-    h2 {
-        font-size: 1.5em;
-    }
-
-    .project-card,
-    .team-member {
-        max-width: 100%;
-    }
-
-    .news-and-feed {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .x-feed {
-        max-width: 100%;
-    }
-
-    footer {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .footer-left,
-    .footer-right {
-        margin: 10px 0;
-    }
-
-    .footer-right {
-        text-align: center;
-    }
-}
-
-/* Easter Egg de Gala Milanesa */
-#gala-rain {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 9999;
-}
-
-.gala-milanesa {
-    position: absolute;
-    width: 50px; /* Reducimos de 612px a 50px */
-    height: 50px;
-    animation: fall 5s linear forwards;
-    transform-origin: center;
-}
-
-@keyframes fall {
-    0% {
-        transform: translateY(-100px) rotate(0deg);
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(100vh) rotate(360deg);
-        opacity: 0;
-    }
-}
-
-.gala-message {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #ff0000; /* Rojo de Niryx Works */
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1em;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 10000;
-}
-
-/* Tema oscuro */
-.dark-theme .gala-message {
-    background-color: #ff5555; /* Rojo más claro en tema oscuro */
-    color: #e0e0e0;
-}
-
-.news-date {
-    font-size: 0.9em;
-    color: #777;
-    margin-bottom: 10px;
-}
-.dark-theme .news-date {
-    color: #bbb;
+button:hover {
+  background-color: #2aa2e0;
 }
