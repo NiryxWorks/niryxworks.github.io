@@ -6,12 +6,13 @@
   <meta name="description" content="Niryx Works - Creative Indie Games & Projects by Matias 'Niryx' Pose">
   <title>Niryx Works</title>
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="assets/aos/aos.css" />
   <link rel="icon" href="images/NiryxWorksLogo.png" type="image/png" />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/3f1eae589f.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <header>
+  <header data-aos="fade-down">
     <div class="logo-container">
       <img src="images/NiryxWorksLogo.png" alt="Niryx Works Logo" class="logo" />
       <span class="site-name">Niryx Works</span>
@@ -25,21 +26,21 @@
   </header>
 
   <main>
-    <section class="hero">
+    <section class="hero" data-aos="zoom-in">
       <h1>Welcome to Niryx Works</h1>
       <p>Crafting stories. Designing experiences. Powered by passion and pixels.</p>
       <a href="projects.html" class="cta-button">Explore Projects</a>
     </section>
 
     <section class="highlight">
-      <h2>Featured Titles</h2>
+      <h2 data-aos="fade-up">Featured Titles</h2>
       <div class="project-preview">
-        <div class="project-card">
+        <div class="project-card" data-aos="fade-right">
           <img src="images/nekophoria-thumb.jpg" alt="Nekophoria" />
           <h3>Nekophoria</h3>
           <p>A cozy visual novel about catgirls running a café. Coming 2026.</p>
         </div>
-        <div class="project-card">
+        <div class="project-card" data-aos="fade-left">
           <img src="images/colorfulhearts-thumb.jpg" alt="Colorful Hearts" />
           <h3>Colorful Hearts</h3>
           <p>An emotional story-driven romance set in an art club. In development.</p>
@@ -47,7 +48,7 @@
       </div>
     </section>
 
-    <section class="news">
+    <section class="news" data-aos="fade-up">
       <h2>Latest News</h2>
       <article>
         <span class="date">Apr 19, 2025</span>
@@ -57,7 +58,7 @@
     </section>
   </main>
 
-  <footer>
+  <footer data-aos="fade-up">
     <p>&copy; 2025 Niryx Works. All rights reserved.</p>
     <div class="social-icons">
       <a href="https://x.com/NiryxWorks" target="_blank"><i class="fab fa-x-twitter"></i></a>
@@ -69,5 +70,9 @@
   <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
     <i class="fas fa-arrow-up"></i>
   </button>
+  <script src="assets/aos/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+  </script>
 </body>
 </html>
