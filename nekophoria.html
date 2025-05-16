@@ -1,502 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Nekophoria - A cozy visual novel about catgirls running a café by Niryx Works">
-    <title>Nekophoria | Niryx Works</title>
-    <link rel="icon" href="images/Icon64.png" sizes="64x64" type="image/png">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&family=Noto+Sans+JP:wght@400;700&family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <style>
-        :root {
-            --primary-bg: #FFFFFF;
-            --secondary-bg: #AEDFF7;
-            --accent: #C81E1E;
-            --text-dark: #333333;
-            --text-light: #FFFFFF;
-        }
-        body {
-            margin: 0;
-            font-family: 'Montserrat', sans-serif;
-            background-color: var(--primary-bg);
-            color: var(--text-dark);
-            line-height: 1.6;
-        }
-        .dark-theme {
-            --primary-bg: #1A1A1A;
-            --secondary-bg: #2C5E77;
-            --text-dark: #FFFFFF;
-            --text-light: #CCCCCC;
-        }
-        header {
-            background-color: var(--secondary-bg);
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        .header-left .logo {
-            height: 50px;
-        }
-        .header-right {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-        .language-selector {
-            padding: 5px;
-            border: 1px solid var(--text-dark);
-            border-radius: 5px;
-            background-color: var(--primary-bg);
-            color: var(--text-dark);
-            font-family: 'Open Sans', sans-serif;
-        }
-        .theme-toggle {
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 1.2em;
-            color: var(--text-dark);
-            transition: color 0.3s;
-        }
-        .dark-theme .theme-toggle {
-            color: var(--text-light);
-        }
-        nav a {
-            margin: 0 10px;
-            text-decoration: none;
-            color: var(--text-dark);
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        nav a:hover {
-            color: var(--accent);
-        }
-        .dark-theme nav a {
-            color: var(--text-light);
-        }
-        .dark-theme nav a:hover {
-            color: var(--accent);
-        }
-        .nekophoria-section {
-            padding: 40px 20px;
-            background-color: var(--primary-bg);
-            text-align: center;
-        }
-        .nekophoria-banner img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-        .nekophoria-nav {
-            margin: 20px 0;
-        }
-        .nekophoria-nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: var(--text-dark);
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        .nekophoria-nav a:hover {
-            color: var(--accent);
-        }
-        .dark-theme .nekophoria-nav a {
-            color: var(--text-light);
-        }
-        .dark-theme .nekophoria-nav a:hover {
-            color: var(--accent);
-        }
-        .nekophoria-topics {
-            margin: 40px 0;
-        }
-        .nekophoria-topics h2 {
-            font-size: 2em;
-            color: var(--accent);
-            border-bottom: 2px solid var(--accent);
-            display: inline-block;
-            padding-bottom: 5px;
-            margin-bottom: 20px;
-        }
-        .topic-image img {
-            max-width: 100%;
-            border-radius: 10px;
-        }
-        .see-more {
-            display: inline-block;
-            margin-top: 20px;
-            color: var(--accent);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        .see-more:hover {
-            color: var(--text-dark);
-        }
-        .dark-theme .see-more:hover {
-            color: var(--text-light);
-        }
-        .nekophoria-news {
-            margin: 40px 0;
-        }
-        .nekophoria-news h2 {
-            font-size: 2em;
-            color: var(--accent);
-            border-bottom: 2px solid var(--accent);
-            display: inline-block;
-            padding-bottom: 5px;
-            margin-bottom: 20px;
-        }
-        .news-item {
-            margin-bottom: 20px;
-        }
-        .news-item h3 {
-            font-size: 1.5em;
-            color: var(--text-dark);
-            margin-bottom: 10px;
-        }
-        .dark-theme .news-item h3 {
-            color: var(--text-light);
-        }
-        .news-date {
-            font-size: 0.9em;
-            color: #777;
-            margin-bottom: 10px;
-        }
-        .dark-theme .news-date {
-            color: #bbb;
-        }
-        .news-item p {
-            font-family: 'Open Sans', sans-serif;
-            color: var(--text-dark);
-        }
-        .dark-theme .news-item p {
-            color: var(--text-light);
-        }
-        .nekophoria-twitter {
-            margin: 40px 0;
-        }
-        .nekophoria-twitter h2 {
-            font-size: 2em;
-            color: var(--accent);
-            border-bottom: 2px solid var(--accent);
-            display: inline-block;
-            padding-bottom: 5px;
-            margin-bottom: 20px;
-        }
-        .twitter-feed {
-            font-family: 'Open Sans', sans-serif;
-            color: var(--text-dark);
-        }
-        .dark-theme .twitter-feed {
-            color: var(--text-light);
-        }
-        .twitter-feed a {
-            color: var(--accent);
-            text-decoration: none;
-        }
-        .twitter-feed a:hover {
-            text-decoration: underline;
-        }
-        footer {
-            background-color: var(--secondary-bg);
-            color: var(--text-light);
-            padding: 20px;
-            text-align: center;
-        }
-        .footer-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-        .footer-left .footer-logo {
-            height: 40px;
-        }
-        .footer-center p {
-            margin: 0;
-        }
-        .footer-center nav {
-            margin-top: 10px;
-        }
-        .footer-center nav a {
-            color: var(--text-light);
-            margin: 0 10px;
-            text-decoration: none;
-        }
-        .footer-center nav a:hover {
-            color: var(--accent);
-        }
-        .footer-center nav span {
-            color: var(--text-light);
-        }
-        .footer-right .social-links {
-            display: flex;
-            gap: 15px;
-        }
-        .social-icon {
-            color: var(--text-light);
-            font-size: 1.5em;
-            transition: color 0.3s;
-        }
-        .social-icon:hover {
-            color: var(--accent);
-        }
-        .back-to-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: var(--accent);
-            color: var(--text-light);
-            border: none;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            display: none;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Nekophoria - A cozy visual novel about catgirls running a café by Niryx Works">
+  <title>Nekophoria | Niryx Works</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="assets/aos/aos.css" />
+  <link rel="icon" href="images/NiryxWorksLogo.png" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/3f1eae589f.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <div class="header-left">
-            <img src="images/NiryxWorksLogo.png" alt="Niryx Works Logo" class="logo">
-        </div>
-        <div class="header-right">
-            <select class="language-selector" id="language-selector">
-                <option value="en">English</option>
-                <option value="es">Español</option>
-                <option value="ja">日本語</option>
-                <option value="zh">中文</option>
-            </select>
-            <button class="theme-toggle" id="theme-toggle" title="Toggle Theme">
-                <i class="fas fa-sun"></i>
-            </button>
-            <nav>
-                <a href="index.html" data-i18n="nav-home">Home</a>
-                <a href="projects.html" data-i18n="nav-projects">Projects</a>
-                <a href="team.html" data-i18n="nav-team">Team</a>
-                <a href="contact.html" data-i18n="nav-contact">Contact</a>
-            </nav>
-        </div>
-    </header>
-    <main>
-        <section class="nekophoria-section">
-            <div class="nekophoria-banner">
-                <img src="images/nekophoria-hero.jpg" alt="Nekophoria Banner">
-            </div>
-            <nav class="nekophoria-nav">
-                <a href="#introduction" data-i18n="nekophoria-introduction">Introduction</a>
-                <a href="#characters" data-i18n="nekophoria-characters">Characters</a>
-                <a href="#shop" data-i18n="nekophoria-shop">Shop</a>
-                <a href="#contact" data-i18n="nekophoria-contact">Contact</a>
-            </nav>
-            <div class="nekophoria-topics">
-                <h2 data-i18n="nekophoria-topics">Topics</h2>
-                <div class="topic-image">
-                    <img src="images/nekophoria-thumb.jpg" alt="Nekophoria Topic Image">
-                </div>
-                <a href="projects.html#nekophoria-topics" class="see-more" data-i18n="see-more">See more</a>
-            </div>
-            <div class="nekophoria-news">
-                <h2 data-i18n="nekophoria-news">News</h2>
-                <div class="news-item">
-                    <h3 data-i18n="news-title">Big news!</h3>
-                    <p class="news-date">19/4/2025</p>
-                    <p data-i18n="news-body-1">I'm working on a new major project: Nekophoria (Neko-Café) —a game about catgirls running a cozy café alongside you, the player.</p>
-                    <p data-i18n="news-body-2">It's being developed side by side with Colorful Hearts (Project: Blue Skies), another story-rich title full of emotion, mystery, and choices.</p>
-                    <p data-i18n="news-body-3">Both games are crafted with love, passion, and an obsession for quality. Every pixel, every line of code, every moment —they're all built to make sure you feel the effort behind them.</p>
-                    <p data-i18n="news-body-4">I won’t set any release dates (because deadlines are evil 😾), but if all goes well, both games should be ready by mid to late 2026.</p>
-                    <p data-i18n="news-body-5">Thanks for following my journey —much love and neko kisses! 🐾💌</p>
-                </div>
-                <a href="projects.html#nekophoria-news" class="see-more" data-i18n="see-more">See more</a>
-            </div>
-            <div class="nekophoria-twitter">
-                <h2 data-i18n="nekophoria-twitter">Twitter</h2>
-                <div class="twitter-feed">
-                    <p>Tweets by <a href="https://x.com/NiryxWorks" target="_blank">@NiryxWorks</a></p>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <div class="footer-container">
-            <div class="footer-left">
-                <img src="images/NewNiryxWorksLogo.png" alt="Niryx Works Logo" class="footer-logo">
-            </div>
-            <div class="footer-center">
-                <p data-i18n="footer">© 2025 Niryx Works. All rights reserved.</p>
-                <nav>
-                    <a href="index.html" data-i18n="nav-home">Home</a>
-                    <span>|</span>
-                    <a href="projects.html" data-i18n="nav-projects">Projects</a>
-                    <span>|</span>
-                    <a href="team.html" data-i18n="nav-team">Team</a>
-                    <span>|</span>
-                    <a href="contact.html" data-i18n="nav-contact">Contact</a>
-                </nav>
-            </div>
-            <div class="footer-right">
-                <div class="social-links">
-                    <a href="https://www.instagram.com/niryxgames/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
-                    <a href="https://x.com/NiryxWorks" target="_blank" class="social-icon"><i class="fab fa-x-twitter"></i></a>
-                    <a href="https://www.youtube.com/@NiryxWorks" target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <button class="back-to-top" onclick="scrollToTop()">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-    <script>
-        const translations = {
-            en: {
-                "nav-home": "Home",
-                "nav-projects": "Projects",
-                "nav-team": "Team",
-                "nav-contact": "Contact",
-                "nekophoria-introduction": "Introduction",
-                "nekophoria-characters": "Characters",
-                "nekophoria-shop": "Shop",
-                "nekophoria-contact": "Contact",
-                "nekophoria-topics": "Topics",
-                "nekophoria-news": "News",
-                "nekophoria-twitter": "Twitter",
-                "see-more": "See more",
-                "news-title": "Big news!",
-                "news-body-1": "I'm working on a new major project: Nekophoria (Neko-Café) —a game about catgirls running a cozy café alongside you, the player.",
-                "news-body-2": "It's being developed side by side with Colorful Hearts (Project: Blue Skies), another story-rich title full of emotion, mystery, and choices.",
-                "news-body-3": "Both games are crafted with love, passion, and an obsession for quality. Every pixel, every line of code, every moment —they're all built to make sure you feel the effort behind them.",
-                "news-body-4": "I won’t set any release dates (because deadlines are evil 😾), but if all goes well, both games should be ready by mid to late 2026.",
-                "news-body-5": "Thanks for following my journey —much love and neko kisses! 🐾💌",
-                "footer": "© 2025 Niryx Works. All rights reserved."
-            },
-            es: {
-                "nav-home": "Inicio",
-                "nav-projects": "Proyectos",
-                "nav-team": "Equipo",
-                "nav-contact": "Contacto",
-                "nekophoria-introduction": "Introducción",
-                "nekophoria-characters": "Personajes",
-                "nekophoria-shop": "Tienda",
-                "nekophoria-contact": "Contacto",
-                "nekophoria-topics": "Temas",
-                "nekophoria-news": "Noticias",
-                "nekophoria-twitter": "Twitter",
-                "see-more": "Ver más",
-                "news-title": "¡Grandes noticias!",
-                "news-body-1": "Estoy trabajando en un nuevo proyecto importante: Nekophoria (Neko-Café) —un juego sobre chicas gato que manejan una acogedora cafetería junto a ti, el jugador.",
-                "news-body-2": "Se está desarrollando junto con Colorful Hearts (Proyecto: Cielos Azules), otro título lleno de historia, emoción, misterio y decisiones.",
-                "news-body-3": "Ambos juegos están creados con amor, pasión y una obsesión por la calidad. Cada píxel, cada línea de código, cada momento —todo está diseñado para que sientas el esfuerzo detrás de ellos.",
-                "news-body-4": "No estableceré fechas de lanzamiento (porque las fechas límite son malvadas 😾), pero si todo sale bien, ambos juegos deberían estar listos para mediados o finales de 2026.",
-                "news-body-5": "Gracias por seguir mi viaje —¡mucho amor y besos de neko! 🐾💌",
-                "footer": "© 2025 Niryx Works. Todos los derechos reservados."
-            },
-            ja: {
-                "nav-home": "ホーム",
-                "nav-projects": "プロジェクト",
-                "nav-team": "チーム",
-                "nav-contact": "連絡先",
-                "nekophoria-introduction": "イントロダクション",
-                "nekophoria-characters": "キャラクター",
-                "nekophoria-shop": "ショップ",
-                "nekophoria-contact": "連絡先",
-                "nekophoria-topics": "トピックス",
-                "nekophoria-news": "ニュース",
-                "nekophoria-twitter": "Twitter",
-                "see-more": "もっと見る",
-                "news-title": "大きなニュース！",
-                "news-body-1": "新しい大型プロジェクトに取り組んでいます：Nekophoria (ネコ・カフェ) —プレイヤーであるあなたと一緒に、猫娘たちが居心地の良いカフェを経営するゲームです。",
-                "news-body-2": "このゲームは、感情、ミステリー、選択肢に満ちたもう一つのストーリー重視のタイトル、Colorful Hearts (プロジェクト：ブルースカイ) と並行して開発されています。",
-                "news-body-3": "どちらのゲームも愛情、情熱、そして品質へのこだわりを持って作られています。すべてのピクセル、すべてのコード行、すべての瞬間—それらはあなたにその努力を感じさせるために作られています。",
-                "news-body-4": "発売日は設定しません（締め切りは悪だから😾）、しかし順調に進めば、どちらのゲームも2026年中盤から後半に完成する予定です。",
-                "news-body-5": "私の旅をフォローしてくれてありがとう—たくさんの愛とネコのキスを！🐾💌",
-                "footer": "© 2025 Niryx Works. 全ての権利を保有します。"
-            },
-            zh: {
-                "nav-home": "首页",
-                "nav-projects": "项目",
-                "nav-team": "团队",
-                "nav-contact": "联系方式",
-                "nekophoria-introduction": "介绍",
-                "nekophoria-characters": "角色",
-                "nekophoria-shop": "商店",
-                "nekophoria-contact": "联系方式",
-                "nekophoria-topics": "话题",
-                "nekophoria-news": "新闻",
-                "nekophoria-twitter": "Twitter",
-                "see-more": "查看更多",
-                "news-title": "重大新闻！",
-                "news-body-1": "我正在开发一个新的大型项目：Nekophoria (猫咪咖啡馆) —一款关于猫女孩与玩家你一起经营一家温馨咖啡馆的游戏。",
-                "news-body-2": "它与另一款充满故事、情感、神秘和选择的标题 Colorful Hearts (项目：蓝天) 同步开发。",
-                "news-body-3": "这两款游戏都以爱、热情和对品质的执着精心打造。每一个像素、每一行代码、每一个瞬间—它们都旨在让你感受到背后的努力。",
-                "news-body-4": "我不会设定任何发布日期（因为截止日期是邪恶的😾），但如果一切顺利，两款游戏都应在2026年中后期准备就绪。",
-                "news-body-5": "感谢你关注我的旅程—满满的爱和猫咪吻！🐾💌",
-                "footer": "© 2025 Niryx Works. 保留所有权利。"
-            }
-        };
+  <header>
+    <div class="logo-container">
+      <img src="images/NiryxWorksLogo.png" alt="Niryx Works Logo" class="logo" />
+      <span class="site-name">Niryx Works</span>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="team.html">Team</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-        function setLanguage(lang) {
-            document.querySelectorAll('[data-i18n]').forEach(element => {
-                const key = element.getAttribute('data-i18n');
-                element.textContent = translations[lang][key];
-            });
-            document.documentElement.lang = lang;
-            localStorage.setItem('language', lang);
-        }
+  <main>
+    <section class="hero" data-aos="fade-up">
+      <h1>Nekophoria</h1>
+      <p>A cozy story-rich visual novel about neko girls, café dreams, and warmth.</p>
+      <!--<a href="downloads/nekophoria-demo.zip" class="cta-button">Download Demo</a>-->
+    </section>
 
-        const languageSelector = document.getElementById('language-selector');
-        const savedLanguage = localStorage.getItem('language') || 'en';
-        languageSelector.value = savedLanguage;
-        setLanguage(savedLanguage);
+    <section class="project-preview" data-aos="fade-up">
+      <div class="project-card">
+        <img src="images/nekophoria-hero.jpg" alt="Nekophoria Screenshot" />
+        <h3>Overview</h3>
+        <p>You are invited into a tranquil café, where catgirls welcome you with warmth and sincerity. Nekophoria blends visual novel storytelling with cozy café simulation vibes.</p>
+      </div>
+      <div class="project-card">
+        <img src="images/nekophoria-thumb.jpg" alt="Characters Preview" />
+        <h3>Characters</h3>
+        <p>Meet the cast of lovable neko girls — each with their own stories, personalities and hidden layers to discover over tea and pastries.</p>
+      </div>
+    </section>
 
-        languageSelector.addEventListener('change', (e) => {
-            setLanguage(e.target.value);
-        });
+    <section class="news" data-aos="fade-up">
+      <h2>Latest News</h2>
+      <article>
+        <span class="date">Apr 19, 2025</span>
+        <h3>Big Announcement</h3>
+        <p>Nekophoria and Colorful Hearts are in active development. Both games will share a core storytelling engine built from scratch for emotional narrative experiences.</p>
+        <p>No hard release dates — we focus on love and quality over speed. ETA: 2026.</p>
+      </article>
+    </section>
 
-        function scrollToTop() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
+    <section class="nekophoria-twitter" data-aos="fade-up">
+      <h2>Follow Updates</h2>
+      <p>Get the latest development news and neko content at <a href="https://x.com/NiryxWorks" target="_blank">@NiryxWorks</a>.</p>
+    </section>
+  </main>
 
-        window.onscroll = function() {
-            const button = document.querySelector('.back-to-top');
-            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                button.style.display = 'block';
-            } else {
-                button.style.display = 'none';
-            }
-        };
+  <footer>
+    <p>&copy; 2025 Niryx Works. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="https://x.com/NiryxWorks" target="_blank"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://www.youtube.com/@NiryxWorks" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.instagram.com/niryxgames/" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+  </footer>
 
-        const html = document.documentElement;
-        const themeToggle = document.getElementById('theme-toggle');
-        const currentTheme = localStorage.getItem('theme') || 'light';
+  <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+    <i class="fas fa-arrow-up"></i>
+  </button>
 
-        if (currentTheme === 'dark') {
-            html.classList.add('dark-theme');
-            themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
-        } else {
-            themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-        }
-
-        themeToggle.addEventListener('click', () => {
-            html.classList.toggle('dark-theme');
-            const newTheme = html.classList.contains('dark-theme') ? 'dark' : 'light';
-            localStorage.setItem('theme', newTheme);
-            themeToggle.innerHTML = newTheme === 'dark' ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>';
-        });
-    </script>
+  <script src="assets/aos/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
