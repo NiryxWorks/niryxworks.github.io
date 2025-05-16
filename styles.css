@@ -224,3 +224,72 @@ footer .social-icons {
 .back-to-top:hover {
   background-color: var(--color-accent-alt);
 }
+
+/* === Character Cards for Nekophoria === */
+.characters {
+  margin: 4rem auto;
+  max-width: 1100px;
+  padding: 0 1rem;
+}
+
+.characters h2 {
+  text-align: center;
+  font-family: var(--font-title);
+  color: var(--color-accent);
+  margin-bottom: 2rem;
+}
+
+.character-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.character-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-accent-alt);
+  border-radius: 10px;
+  padding: 1rem;
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.character-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,212,255,0.2);
+}
+
+.character-card img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 2px solid var(--color-accent);
+  background-color: #111;
+}
+
+.character-card h3 {
+  font-family: var(--font-title);
+  color: var(--color-accent);
+  margin-bottom: 0.5rem;
+}
+
+.character-card .quote {
+  font-style: italic;
+  color: var(--color-muted);
+  margin-bottom: 1rem;
+}
+
+.character-card .desc {
+  color: var(--color-text);
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+}
+
+.character-card .fact {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
