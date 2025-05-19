@@ -307,3 +307,53 @@ footer .social-icons {
 .legal-article:hover {
   transform: translateY(-2px);
 }
+
+.download-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--color-accent-alt);
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-family: var(--font-title);
+}
+
+.cta-button:hover {
+  background-color: var(--color-accent);
+  transform: translateY(-2px);
+}
+
+.cta-button i {
+  font-size: 1.2rem;
+}
+
+/* Botones temáticos */
+.cta-button.steam {
+  background-color: #1b2838;
+}
+
+.cta-button.steam:hover {
+  background-color: #2a475e;
+}
+
+.cta-button.android {
+  background-color: #3ddc84;
+  color: #000;
+}
+
+.cta-button.android:hover {
+  background-color: #25b96b;
+}
+
