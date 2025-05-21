@@ -402,3 +402,11 @@ footer .social-icons {
   padding-left: 1.2rem;
 }
 
+.news-page h1 {
+  color: var(--color-accent);
+}
+
+.news-article {
+  background-color: var(--color-surface);
+  color: var(--color-text);
+}
