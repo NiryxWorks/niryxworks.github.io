@@ -410,3 +410,35 @@ footer .social-icons {
   background-color: var(--color-surface);
   color: var(--color-text);
 }
+
+/* === Corrección visual para sección de noticias === */
+.news-page h1 {
+  font-size: 2.5rem;
+  color: var(--color-accent);
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.news-article {
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  border: 1px solid var(--color-accent-alt);
+  border-radius: 10px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 212, 255, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.news-article h2 {
+  font-size: 1.6rem;
+  color: var(--color-accent);
+  margin-bottom: 1rem;
+}
+
+.news-article .date {
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  display: block;
+  margin-bottom: 0.5rem;
+}
